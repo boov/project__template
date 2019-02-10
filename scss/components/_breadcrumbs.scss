@@ -1,0 +1,36 @@
+$c_breadcrumbs--font-size: $base--font-size--small !default;
+
+$c_breadcrumbs__item--before--margin: 0 1em !default;
+$c_breadcrumbs__item--before--content: "\203A" !default;
+
+$c_breadcrumbs__link--color: inherit !default;
+$c_breadcrumbs__link--font-weight: $base--font-weight--bold !default;
+
+.c_breadcrumbs {
+  font-size: $c_breadcrumbs--font-size;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    align-items: center;
+    display: inherit;
+  }
+
+  &__item + &__item {
+    &:before {
+      content: $c_breadcrumbs__item--before--content;
+      margin: $c_breadcrumbs__item--before--margin;
+    }
+  }
+
+  &__link {
+    color: $c_breadcrumbs__link--color;
+    font-weight: $c_breadcrumbs__link--font-weight;
+  }
+}

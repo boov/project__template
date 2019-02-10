@@ -1,0 +1,50 @@
+$o_heading--color: $swatch--emphasis !default;
+$o_heading--font-family: $base--font-family--display !default;
+$o_heading--font-weight: $base--font-weight--bold !default;
+$o_heading--line-height: $base--line-height--tight !default;
+$o_heading--margin: $base--margin !default;
+
+$o_heading--h1--font-size: 2.488rem !default;
+$o_heading--h2--font-size: 2.074rem !default;
+$o_heading--h3--font-size: 1.728rem !default;
+$o_heading--h4--font-size: 1.440rem !default;
+$o_heading--h5--font-size: 1.200rem !default;
+$o_heading--h6--font-size: 1.000rem !default;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $o_heading--color;
+  font-family: $o_heading--font-family;
+  font-weight: $o_heading--font-weight;
+  line-height: $o_heading--line-height;
+  margin: $o_heading--margin;
+  word-wrap: break-word;
+}
+
+h1 {
+  font-size: $o_heading--h1--font-size;
+}
+
+h2 {
+  font-size: $o_heading--h2--font-size;
+}
+
+h3 {
+  font-size: $o_heading--h3--font-size;
+}
+
+h4 {
+  font-size: $o_heading--h4--font-size;
+}
+
+h5 {
+  font-size: $o_heading--h5--font-size;
+}
+
+h6 {
+  font-size: $o_heading--h6--font-size;
+}

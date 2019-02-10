@@ -1,0 +1,23 @@
+$u_border-radius--breakpoints: $base--breakpoints !default;
+
+$u_border-radius--utilities: (
+  default: $base--border-radius,
+  none: 0,
+  round: $base--border-radius--round
+) !default;
+
+@each $utility-key, $utility-value in $u_border-radius--utilities {
+  .u_border-radius--#{$utility-key} {
+    border-radius: $utility-value !important;
+  }
+}
+
+@each $utility-key, $utility-value in $u_border-radius--utilities {
+  @each $breakpoint-name, $breakpoint-size in $u_border-radius--breakpoints {
+    @media (min-width: $breakpoint-size) {
+      .u_border-radius--#{$utility-key}--#{$breakpoint-name} {
+        border-radius: $utility-value !important;
+      }
+    }
+  }
+}

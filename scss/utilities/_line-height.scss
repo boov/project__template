@@ -1,0 +1,23 @@
+$u_line-height--breakpoints: $base--breakpoints !default;
+
+$u_line-height--utilities: (
+  default: $base--line-height,
+  loose: $base--line-height--loose,
+  tight: $base--line-height--tight
+) !default;
+
+@each $utility-key, $utility-value in $u_line-height--utilities {
+  .u_line-height--#{$utility-key} {
+    line-height: $utility-value !important;
+  }
+}
+
+@each $utility-key, $utility-value in $u_line-height--utilities {
+  @each $breakpoint-name, $breakpoint-size in $u_line-height--breakpoints {
+    @media (min-width: $breakpoint-size) {
+      .u_line-height--#{$utility-key}--#{$breakpoint-name} {
+        line-height: $utility-value !important;
+      }
+    }
+  }
+}

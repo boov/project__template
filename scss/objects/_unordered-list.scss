@@ -1,0 +1,11 @@
+$o_unordered-list--margin: $base--margin !default;
+
+ul {
+  list-style-position: inside;
+  margin: $o_unordered-list--margin;
+  padding: 0;
+
+  & & {
+    margin: 0 0 0 2em;
+  }
+}

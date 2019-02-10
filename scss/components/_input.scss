@@ -1,0 +1,64 @@
+$c_input--background-color: white !default;
+$c_input--border-color: $base--border-color !default;
+$c_input--border-radius: $base--border-radius !default;
+$c_input--border-style: solid !default;
+$c_input--border-width: $base--border-width !default;
+$c_input--color: $swatch--copy !default;
+$c_input--font-family: inherit !default;
+$c_input--font-size: $base--font-size !default;
+$c_input--line-height: $base--line-height !default;
+$c_input--padding: 1em 1.5em !default;
+
+$c_input--placeholder--color: mix($c_input--color, $c_input--background-color) !default;
+
+$c_input--focus--background-color: $c_input--background-color !default;
+$c_input--focus--border-color: darken($c_input--border-color, 10%) !default;
+$c_input--focus--color: $c_input--color !default;
+
+$c_input--small--font-size: $base--font-size--small !default;
+
+$c_input--large--font-size: $base--font-size--large !default;
+
+.c_input {
+  background-color: $c_input--background-color;
+  border-color: $c_input--border-color;
+  border-radius: $c_input--border-radius;
+  border-style: $c_input--border-style;
+  border-width: $c_input--border-width;
+  color: $c_input--color;
+  font-family: $c_input--font-family;
+  font-size: $c_input--font-size;
+  line-height: $c_input--line-height;
+  padding: $c_input--padding;
+  width: 100%;
+
+  &::placeholder {
+    color: $c_input--placeholder--color;
+  }
+
+  &:focus {
+    background-color: $c_input--focus--background-color;
+    border-color: $c_input--focus--border-color;
+    color: $c_input--focus--color;
+    outline: none;
+  }
+
+  &--textarea {
+    display: block;
+    height: auto;
+    padding: $c_input--padding; // These need changing to their own unique variable
+  }
+
+  &--select-multiple {
+    height: auto;
+    padding: $c_input--padding; // These need changing to their own unique variable
+  }
+
+  &--small {
+    font-size: $c_input--small--font-size;
+  }
+
+  &--large {
+    font-size: $c_input--large--font-size;
+  }
+}

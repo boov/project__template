@@ -1,0 +1,27 @@
+$u_color--breakpoints: $base--breakpoints !default;
+
+$u_color--utilities: (
+  action: $swatch--action,
+  brand: $swatch--brand,
+  color: $swatch--copy,
+  emphasis: $swatch--emphasis,
+  negative: $swatch--negative,
+  positive: $swatch--positive,
+  subtle: $swatch--subtle,
+) !default;
+
+@each $utility-key, $utility-value in $u_color--utilities {
+  .u_color--#{$utility-key} {
+    color: $utility-value !important;
+  }
+}
+
+@each $utility-key, $utility-value in $u_color--utilities {
+  @each $breakpoint-name, $breakpoint-size in $u_color--breakpoints {
+    @media (min-width: $breakpoint-size) {
+      .u_color--#{$utility-key}--#{$breakpoint-name} {
+        color: $utility-value !important;
+      }
+    }
+  }
+}

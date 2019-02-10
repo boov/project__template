@@ -1,0 +1,7 @@
+$u_lead--font-size: $base--font-size--large !default;
+$u_lead--font-weight: $base--font-weight--light !default;
+
+.u_lead {
+  font-size: $u_lead--font-size;
+  font-weight: $u_lead--font-weight;
+}

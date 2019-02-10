@@ -1,0 +1,34 @@
+$o_select--font-family: inherit !default;
+$o_select--font-size: $base--font-size !default;
+$o_select--height: 3em !default;
+$o_select--padding: 0 1em !default;
+
+$o_select--disabled--cursor: not-allowed !default;
+$o_select--disabled--opacity: 0.5 !default;
+
+$o_select--multiple--height: auto !default;
+$o_select--multiple--padding: 1em !default;
+
+$o_select--readonly--cursor: $o_select--disabled--cursor !default;
+
+select {
+  font-family: $o_select--font-family;
+  font-size: $o_select--font-size;
+  //height: $o_select--height;
+  //padding: $o_select--padding;
+  //width: 100%;
+
+  /* &[disabled] {
+    cursor: $o_select--disabled--cursor;
+    opacity: $o_select--disabled--opacity;
+  }
+
+  &[multiple] {
+    height: $o_select--multiple--height;
+    padding: $o_select--multiple--padding;
+  }
+
+  &[readonly] {
+    cursor: $o_select--readonly--cursor;
+  } */
+}

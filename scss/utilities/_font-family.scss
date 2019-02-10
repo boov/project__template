@@ -1,0 +1,23 @@
+$u_font-family--breakpoints: $base--breakpoints !default;
+
+$u_font-family--utilities: (
+  default: $base--font-family,
+  display: $base--font-family--display,
+  monospace: $base--font-family--monospace
+) !default;
+
+@each $utility-key, $utility-value in $u_font-family--utilities {
+  .u_font-family--#{$utility-key} {
+    font-family: $utility-value !important;
+  }
+}
+
+@each $utility-key, $utility-value in $u_font-family--utilities {
+  @each $breakpoint-name, $breakpoint-size in $u_font-family--breakpoints {
+    @media (min-width: $breakpoint-size) {
+      .u_font-family--#{$utility-key}--#{$breakpoint-name} {
+        font-family: $utility-value !important;
+      }
+    }
+  }
+}

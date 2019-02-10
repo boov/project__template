@@ -1,0 +1,7 @@
+$o_mark--background-color: rgba(#FDD835, 0.4) !default;
+$o_mark--padding: 0.2em 0.3em !default;
+
+mark {
+  background-color: $o_mark--background-color;
+  padding: $o_mark--padding;
+}

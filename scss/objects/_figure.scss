@@ -1,0 +1,14 @@
+$o_figure--margin: 2.5em auto !default;
+$o_figure__caption--color: $swatch--subtle !default;
+$o_figure__caption--font-size: $base--font-size--small !default;
+
+figure {
+  clear: both;
+  display: block;
+  margin: $o_figure--margin;
+
+  figcaption {
+    color: $o_figure__caption--color;
+    font-size: $o_figure__caption--font-size;
+  }
+}

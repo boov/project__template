@@ -1,0 +1,11 @@
+$o_rule--border-color: $base--border-color !default;
+$o_rule--border-style: solid !default;
+$o_rule--border-width: $base--border-width 0 0 0 !default;
+$o_rule--margin: 2em 0 !default;
+
+hr {
+  border-color: $o_rule--border-color;
+  border-style: $o_rule--border-style;
+  border-width: $o_rule--border-width;
+  margin: $o_rule--margin;
+}
