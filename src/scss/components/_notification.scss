@@ -1,0 +1,87 @@
+$c_notification--background-color: $swatch--brand !default;
+$c_notification--border-radius: $base--border-radius !default;
+$c_notification--color: mix($swatch--brand, white, 15%) !default;
+$c_notification--font-size: $base--font-size--small !default;
+$c_notification--margin: $base--margin !default;
+
+$c_notification--positive--background-color: $swatch--positive !default;
+$c_notification--positive--color: mix($swatch--positive, white, 15%) !default;
+
+$c_notification--negative--background-color: $swatch--negative !default;
+$c_notification--negative--color: mix($swatch--negative, white, 15%) !default;
+
+$c_notification__content--padding: 1.5em !default;
+
+$c_notification__link--color: white !default;
+$c_notification__link--border-bottom: 1px dashed !default;
+
+$c_notification__link--hover--color: white !default;
+
+$c_notification__close--background-color: rgba(black, 0.05) !default;
+$c_notification__close--color: white !default;
+$c_notification__close--font-size: $base--font-size !default;
+$c_notification__close--padding: 1.5em !default;
+
+$c_notification__close--hover--background-color: rgba(black, 0.1) !default;
+$c_notification__close--hover--color: white !default;
+
+$c_notification__close--focus--background-color: rgba(black, 0.2) !default;
+$c_notification__close--focus--color: white !default;
+
+.c_notification {
+  background-color: $c_notification--background-color;
+  border-radius: $c_notification--border-radius;
+  color: $c_notification--color;
+  display: flex;
+  font-size: $c_notification--font-size;
+  margin: $c_notification--margin;
+  overflow: hidden;
+
+  &--positive {
+    background-color: $c_notification--positive--background-color;
+    color: $c_notification--positive--color;
+  }
+
+  &--negative {
+    background-color: $c_notification--negative--background-color;
+    color: $c_notification--negative--color;
+  }
+
+  &__content {
+    flex-grow: 1;
+    padding: $c_notification__content--padding;
+  }
+
+  &__link {
+    color: $c_notification__link--color;
+    border-bottom: $c_notification__link--border-bottom;
+
+    &:hover {
+      color: $c_notification__link--hover--color;
+    }
+
+    &:focus {
+      color: $c_notification__link--hover--color;
+    }
+  }
+
+  &__close {
+    align-items: center;
+    background-color: $c_notification__close--background-color;
+    color: $c_notification__close--color;
+    display: flex;
+    font-weight: $base--font-weight--bold;
+    justify-content: center;
+    padding: $c_notification__close--padding;
+
+    &:hover {
+      background-color: $c_notification__close--hover--background-color;
+      color: $c_notification__close--hover--color;
+    }
+
+    &:focus {
+      background-color: $c_notification__close--focus--background-color;
+      color: $c_notification__close--focus--color;
+    }
+  }
+}

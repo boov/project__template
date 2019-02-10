@@ -1,0 +1,27 @@
+$e_fieldset--border-color: $base--border-color !default;
+$e_fieldset--border-radius: $base--border-radius !default;
+$e_fieldset--border-style: solid !default;
+$e_fieldset--border-width: $base--border-width !default;
+$e_fieldset--margin: $base--margin !default;
+$e_fieldset--padding: 2em !default;
+$e_fieldset__legend--color: $swatch--emphasis !default;
+$e_fieldset__legend--font-size: $base--font-size--large !default;
+$e_fieldset__legend--font-weight: $base--font-weight--bold !default;
+$e_fieldset__legend--padding: 0 0.5em !default;
+
+.e_fieldset {
+  border-color: $e_fieldset--border-color;
+  border-radius: $e_fieldset--border-radius;
+  border-style: $e_fieldset--border-style;
+  border-width: $e_fieldset--border-width;
+  margin: $e_fieldset--margin;
+  min-width: 0;
+  padding: $e_fieldset--padding;
+
+  &__legend {
+    color: $e_fieldset__legend--color;
+    font-size: $e_fieldset__legend--font-size;
+    font-weight: $e_fieldset__legend--font-weight;
+    padding: $e_fieldset__legend--padding;
+  }
+}

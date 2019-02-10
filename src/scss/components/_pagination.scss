@@ -1,0 +1,45 @@
+.c_pagination {
+  font-size: $base--font-size--small;
+  font-weight: $base--font-weight--bold;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: -0.2em;
+    padding: 0;
+  }
+
+  &__item {
+    margin: 0.2em;
+  }
+
+  span,
+  a {
+    align-items: center;
+    background-color: $swatch--border;
+    border-radius: $base--border-radius;
+    border-style: solid;
+    border-width: $base--border-width;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    min-width: 40px;
+    padding: 0 1em;
+  }
+
+  &__active {
+    border-color: $swatch--copy;
+  }
+
+  &__link {
+    border-color: $swatch--border;
+    color: $swatch--copy;
+
+    &:focus,
+    &:hover {
+      border-color: $swatch--copy;
+    }
+  }
+}

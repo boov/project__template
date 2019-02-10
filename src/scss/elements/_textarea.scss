@@ -1,0 +1,19 @@
+$e_textarea--border-radius: $base--border-radius !default;
+$e_textarea--border: $base--border-width solid $swatch--border !default;
+$e_textarea--font-family: inherit !default;
+$e_textarea--font-size: $base--font-size !default;
+$e_textarea--line-height: $base--line-height !default;
+$e_textarea--padding: 1em !default;
+
+.e_textarea {
+  border-radius: $e_textarea--border-radius;
+  border: $e_textarea--border;
+  display: block;
+  font-family: $e_textarea--font-family;
+  font-size: $e_textarea--font-size;
+  line-height: $e_textarea--line-height;
+  overflow: auto;
+  padding: $e_textarea--padding;
+  resize: vertical;
+  width: 100%;
+}

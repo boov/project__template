@@ -1,0 +1,12 @@
+$e_label--color: $swatch--emphasis !default;
+$e_label--font-size: $base--font-size--small !default;
+$e_label--font-weight: $base--font-weight--bold !default;
+$e_label--margin: 0 0 0.5em 0 !default;
+
+.e_label {
+  color: $e_label--color;
+  display: block;
+  font-size: $e_label--font-size;
+  font-weight: $base--font-weight--bold;
+  margin: $e_label--margin;
+}

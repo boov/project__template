@@ -1,0 +1,17 @@
+.c_card {
+  background-color: white;
+  border-radius: $base--border-radius;
+  display: flex;
+  border: 1px solid red;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__header {
+    background-color: #F6F6F6;
+  }
+
+  &__content {
+    padding: 40px;
+    color: $swatch--copy;
+  }
+}

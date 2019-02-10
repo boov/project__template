@@ -1,0 +1,17 @@
+$e_select--border-radius: $base--border-radius !default;
+$e_select--border: $base--border-width solid $swatch--border !default;
+$e_select--font-family: inherit !default;
+$e_select--font-size: $base--font-size !default;
+$e_select--line-height: $base--line-height !default;
+$e_select--padding: 1em !default;
+
+.e_select {
+  border-radius: $e_select--border-radius;
+  border: $e_select--border;
+  display: block;
+  font-family: $e_select--font-family;
+  font-size: $e_select--font-size;
+  line-height: $e_select--line-height;
+  padding: $e_select--padding;
+  width: 100%;
+}

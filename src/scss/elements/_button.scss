@@ -1,0 +1,98 @@
+$e_button--background: $swatch--action !default;
+$e_button--border-color: darken($e_button--background, 10%) !default;
+$e_button--border-radius: $base--border-radius !default;
+$e_button--border-width: $base--border-width !default;
+$e_button--color: white !default;
+$e_button--font-family: $base--font-family !default;
+$e_button--font-size: $base--font-size !default;
+$e_button--font-weight: $base--font-weight--bold !default;
+$e_button--line-height: $base--line-height !default;
+$e_button--padding: 1em 2em !default;
+
+$e_button--hover--background: darken($e_button--background, 5%) !default;
+$e_button--hover--border-color: darken($e_button--border-color, 5%) !default;
+$e_button--hover--color: $e_button--color !default;
+
+$e_button--focus--background: darken($e_button--background, 10%) !default;
+$e_button--focus--border-color: darken($e_button--border-color, 10%) !default;
+$e_button--focus--color: $e_button--color !default;
+
+$e_button--text--color: $swatch--action !default;
+$e_button--text--hover--color: darken($swatch--action, 5%) !default;
+$e_button--text--focus--color: darken($swatch--action, 10%) !default;
+
+$e_button--small--font-size: $base--font-size--small !default;
+
+$e_button--large--font-size: $base--font-size--large !default;
+
+$e_button--disabled--cursor: not-allowed !default;
+$e_button--disabled--opacity: 0.5 !default;
+
+.e_button {
+  appearance: none;
+  background: $e_button--background;
+  border-color: $e_button--border-color;
+  border-radius: $e_button--border-radius;
+  border-style: solid;
+  border-width: $e_button--border-width;
+  color: $e_button--color;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $e_button--font-family;
+  font-size: $e_button--font-size;
+  font-weight: $e_button--font-weight;
+  line-height: $e_button--line-height;
+  padding: $e_button--padding;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    background: $e_button--hover--background;
+    border-color: $e_button--hover--border-color;
+    color: $e_button--hover--color;
+  }
+
+  &:focus {
+    background: $e_button--focus--background;
+    border-color: $e_button--focus--border-color;
+    color: $e_button--focus--color;
+    outline: none;
+  }
+
+  &--block {
+    display: block;
+  }
+
+  &--small {
+    font-size: $e_button--small--font-size;
+  }
+
+  &--large {
+    font-size: $e_button--large--font-size;
+  }
+
+  &--text {
+    background-color: transparent;
+    border-radius: unset;
+    border: none;
+    color: $e_button--text--color;
+    padding: 0;
+
+    &:hover {
+      background-color: transparent;
+      border: none;
+      color: $e_button--text--hover--color;
+    }
+
+    &:focus {
+      background-color: transparent;
+      border: none;
+      color: $e_button--text--focus--color;
+    }
+  }
+
+  &[disabled] {
+    cursor: $e_button--disabled--cursor;
+    opacity: $e_button--disabled--opacity;
+  }
+}
