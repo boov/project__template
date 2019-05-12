@@ -1,12 +1,13 @@
 // swatch
-$swatch--copy: #666666 !default;
-$swatch--border: lighten($swatch--copy, 40%) !default;
-$swatch--action: #D81B60 !default;
-$swatch--brand: #00ACC1 !default;
-$swatch--emphasis: darken($swatch--copy, 20%) !default;
-$swatch--subtle: lighten($swatch--copy, 20%) !default;
-$swatch--positive: #7CB342 !default;
-$swatch--negative: #E53935 !default;
+$swatch--brand-hue: 174;
+$swatch--copy: hsl($swatch--brand-hue, 5%, 40%) !default;
+$swatch--border: hsl($swatch--brand-hue, 5%, 95%) !default;
+$swatch--action: hsl($swatch--brand-hue, 100%, 40%) !default;
+$swatch--brand: hsl($swatch--brand-hue, 100%, 40%) !default;
+$swatch--emphasis: hsl($swatch--brand-hue, 5%, 20%) !default;
+$swatch--subtle: hsl($swatch--brand-hue, 5%, 60%) !default;
+$swatch--positive: hsl(85, 60%, 50%) !default;
+$swatch--negative: hsl(5, 60%, 50%) !default;
 
 // border-color
 $base--border-color: $swatch--border !default;
@@ -22,13 +23,18 @@ $base--border-width: 2px !default;
 $base--border-width--thick: 4px !default;
 $base--border-width--thin: 1px !default;
 
-// line-height
-$base--line-height: 1.5 !default;
-$base--line-height--tight: 1.2 !default;
-$base--line-height--loose: 1.7 !default;
+// breakpoints
+$base--breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
 
-// margin
-$base--margin: 0 0 1em 0 !default; // CRAP
+// duration
+$base--duration: 200ms;
+$base--duration--fast: 100ms;
+$base--duration--slow: 400ms;
 
 // font-family
 $base--font-family: sans-serif !default;
@@ -47,10 +53,13 @@ $base--font-weight: normal !default;
 $base--font-weight--bold: bolder !default;
 $base--font-weight--light: lighter !default;
 
-// breakpoints
-$base--breakpoints: (
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-) !default;
+// line-height
+$base--line-height: 1.5 !default;
+$base--line-height--tight: 1.2 !default;
+$base--line-height--loose: 1.7 !default;
+
+// margin
+$base--margin: 0 0 1em 0 !default;
+
+// shadow
+$base--shadow: 0 3px 5px rgba(black, 0.2) !default;

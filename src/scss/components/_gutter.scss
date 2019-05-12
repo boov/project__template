@@ -1,14 +1,18 @@
-$c_gutter--width: 300px !default;
 $c_gutter--background-color: $swatch--emphasis !default;
+$c_gutter--max-width: 90% !default;
+$c_gutter--transition: left $base--duration, right $base--duration !default;
+$c_gutter--width: 300px !default;
 $c_gutter--z-index: 1000 !default;
 
 .c_gutter {
   $this: &;
   background-color: $c_gutter--background-color;
   bottom: 0;
+  max-width: $c_gutter--max-width;
   position: fixed;
   right: -$c_gutter--width;
   top: 0;
+  transition: $c_gutter--transition;
   visibility: hidden;
   width: $c_gutter--width;
   z-index: $c_gutter--z-index;

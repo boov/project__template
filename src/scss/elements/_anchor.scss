@@ -3,10 +3,12 @@ $e_anchor--focus--color: darken($e_anchor--color, 10%) !default;
 $e_anchor--focus--outline: none !default;
 $e_anchor--hover--color: darken($e_anchor--color, 5%) !default;
 $e_anchor--text-decoration: none !default;
+$e_anchor--transition: color $base--duration;
 
 .e_anchor {
   color: $e_anchor--color;
   text-decoration: $e_anchor--text-decoration;
+  transition: $e_anchor--transition;
 
   &:hover {
     color: $e_anchor--hover--color;

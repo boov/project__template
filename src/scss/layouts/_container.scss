@@ -3,6 +3,8 @@ $l_container--max-width: 1300px !default;
 $l_container--padding: 0 30px !default;
 $l_container--width: 90% !default;
 
+$l_container--mini--max-width: $l_container--max-width * 0.5 !default;
+
 $l_container--narrow--max-width: $l_container--max-width * 0.75 !default;
 
 $l_container--wide--max-width: $l_container--max-width * 1.25 !default;
@@ -12,6 +14,10 @@ $l_container--wide--max-width: $l_container--max-width * 1.25 !default;
   max-width: $l_container--max-width;
   padding: $l_container--padding;
   width: $l_container--width;
+
+  &--mini {
+    max-width: $l_container--mini--max-width;
+  }
 
   &--narrow {
     max-width: $l_container--narrow--max-width;

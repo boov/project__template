@@ -2,6 +2,7 @@ $e_rule--border-color: $base--border-color !default;
 $e_rule--border-style: solid !default;
 $e_rule--border-width: $base--border-width 0 0 0 !default;
 $e_rule--margin: 3em 0 !default;
+$e_rule--max-width: none !default;
 
 .e_rule {
   border-color: $e_rule--border-color;
@@ -9,5 +10,6 @@ $e_rule--margin: 3em 0 !default;
   border-width: $e_rule--border-width;
   height: 0;
   margin: $e_rule--margin;
+  max-width: $e_rule--max-width;
   overflow: visible;
 }
