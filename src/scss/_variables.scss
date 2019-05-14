@@ -1,5 +1,5 @@
 // swatch
-$swatch--brand-hue: 174;
+$swatch--brand-hue: 174 !default;
 $swatch--copy: hsl($swatch--brand-hue, 5%, 40%) !default;
 $swatch--border: hsl($swatch--brand-hue, 5%, 95%) !default;
 $swatch--action: hsl($swatch--brand-hue, 100%, 40%) !default;
@@ -32,9 +32,9 @@ $base--breakpoints: (
 ) !default;
 
 // duration
-$base--duration: 200ms;
-$base--duration--fast: 100ms;
-$base--duration--slow: 400ms;
+$base--duration: 200ms !default;
+$base--duration--fast: 100ms !default;
+$base--duration--slow: 400ms !default;
 
 // font-family
 $base--font-family: sans-serif !default;

@@ -281,8 +281,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/matthew/repositories/github/framework/src/js/main.js */"./src/js/main.js");
-module.exports = __webpack_require__(/*! /home/matthew/repositories/github/framework/src/scss/main.scss */"./src/scss/main.scss");
+__webpack_require__(/*! /mnt/c/Repositories/github/framework/src/js/main.js */"./src/js/main.js");
+module.exports = __webpack_require__(/*! /mnt/c/Repositories/github/framework/src/scss/main.scss */"./src/scss/main.scss");
 
 
 /***/ })
