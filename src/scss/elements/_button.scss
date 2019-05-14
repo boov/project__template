@@ -8,6 +8,9 @@ $e_button--font-size: $base--font-size !default;
 $e_button--font-weight: $base--font-weight--bold !default;
 $e_button--line-height: $base--line-height !default;
 $e_button--padding: 1em 2em !default;
+$e_button--text-align: center !default;
+$e_button--transition: background-color $base--duration, color $base--duration,
+  border-color $base--duration !default;
 
 $e_button--hover--background: darken($e_button--background, 5%) !default;
 $e_button--hover--border-color: darken($e_button--border-color, 5%) !default;
@@ -43,8 +46,9 @@ $e_button--disabled--opacity: 0.5 !default;
   font-weight: $e_button--font-weight;
   line-height: $e_button--line-height;
   padding: $e_button--padding;
-  text-align: center;
+  text-align: $e_button--text-align;
   text-decoration: none;
+  transition: $e_button--transition;
 
   &:hover {
     background: $e_button--hover--background;

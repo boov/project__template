@@ -15,30 +15,26 @@
     margin: 0.2em;
   }
 
-  span,
-  a {
+  &__link {
     align-items: center;
     background-color: $swatch--border;
+    border-color: $base--border-color;
     border-radius: $base--border-radius;
     border-style: solid;
     border-width: $base--border-width;
+    color: $swatch--copy;
     display: flex;
     height: 40px;
     justify-content: center;
     min-width: 40px;
     padding: 0 1em;
-  }
-
-  &__active {
-    border-color: $swatch--copy;
-  }
-
-  &__link {
-    border-color: $swatch--border;
-    color: $swatch--copy;
 
     &:focus,
     &:hover {
+      border-color: $swatch--copy;
+    }
+
+    &--active {
       border-color: $swatch--copy;
     }
   }

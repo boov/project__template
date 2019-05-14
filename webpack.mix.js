@@ -2,7 +2,6 @@ const mix = require("laravel-mix");
 
 mix
   .disableNotifications()
-  .setPublicPath("dist")
-  .sass("src/scss/framework.scss", "dist")
-  .js("src/js/framework.js", "dist")
-  .babel("dist/framework.js", "dist/framework.js");
+  .setPublicPath("demo")
+  .sass("src/scss/main.scss", "demo")
+  .js("src/js/main.js", "demo");

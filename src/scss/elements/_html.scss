@@ -1,10 +1,17 @@
+$e_html--color: $swatch--copy !default;
+$e_html--font-family: $base--font-family !default;
+$e_html--font-size: 100% !default;
+$e_html--font-weight: $base--font-weight !default;
+$e_html--line-height: $base--line-height !default;
+
 .e_html {
   box-sizing: border-box;
-  color: $swatch--copy;
-  font-family: $base--font-family;
-  font-size: $base--font-size;
-  font-weight: $base--font-weight;
-  line-height: $base--line-height;
+  color: $e_html--color;
+  font-family: $e_html--font-family;
+  font-size: $e_html--font-size;
+  font-weight: $e_html--font-weight;
+  line-height: $e_html--line-height;
+  scroll-behavior: smooth;
   text-size-adjust: 100%;
 
   * {

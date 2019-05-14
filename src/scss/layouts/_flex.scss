@@ -1,7 +1,9 @@
 $l_flex__column--count: 12 !default;
 $l_flex__column--spacing: 40px !default;
 
-$l_flex__column--tight--spacing: 20px !default;
+$l_flex__column--loose--spacing: $l_flex__column--spacing * 2 !default;
+
+$l_flex__column--tight--spacing: $l_flex__column--spacing / 2 !default;
 
 $l_flex--breakpoints: $base--breakpoints !default;
 
@@ -14,6 +16,26 @@ $l_flex--breakpoints: $base--breakpoints !default;
   margin-bottom: 0;
   margin-left: -($l_flex__column--spacing / 2);
   margin-right: -($l_flex__column--spacing / 2);
+
+  &--collapse {
+    margin-left: 0;
+    margin-right: 0;
+
+    #{$this}__col {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &--loose {
+    margin-left: -($l_flex__column--loose--spacing / 2);
+    margin-right: -($l_flex__column--loose--spacing / 2);
+
+    #{$this}__col {
+      padding-left: ($l_flex__column--loose--spacing / 2);
+      padding-right: ($l_flex__column--loose--spacing / 2);
+    }
+  }
 
   &--tight {
     margin-left: -($l_flex__column--tight--spacing / 2);

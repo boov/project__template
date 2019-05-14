@@ -6,16 +6,27 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Framework Preview</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" media="screen" href="../dist/framework.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="preview.css" />
+		<script src="main.js"></script>
 	</head>
 
 	<body>
 		<h1 class="page-title">Framework Preview</h1>
 
-		<!-- <h2 class="section-title">Elements</h2>
+		<h2 class="section-title">Elements</h2>
 
 		<div class="preview">
+			<h2 class="preview__title">blockquote</h2>
+			<blockquote>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos iusto libero velit rerum commodi. Ea mollitia tenetur sequi soluta eius eum, similique maiores officiis nesciunt repudiandae blanditiis, quis molestias consectetur.</p>
+				<cite>Albert Einstein, Quote Author</cite>
+			</blockquote>
+			<hr>
+		</div>
+
+
+		<!-- <div class="preview">
 			<address>92-96 Lord Street,<br>Hesketh Mount,<br>Southport,<br>PR8 1JR</address>
 			<form action="">asd</form>
 			<input id="radio-choice-1" name="radio-choice" tabindex="2" type="radio" value="choice-1"> <input id="radio-choice-2" name="radio-choice" tabindex="3" type="radio" value="choice-2"> <input name="checkbox" type="checkbox"> <input type="submit" value="Submit">
@@ -238,16 +249,24 @@ body {
 		</div>
 
 		<div class="preview">
+			<h2 class="preview__title">box</h2>
+			<a href="#" class="c_box c_box--clickable">
+				<h3>ISA Transfers</h3>
+				<p>Over the last twelve months we have spoken to thousands of clients and customers with regards to their existing ISA’s…</p>
+			</a>
+		</div>
+
+		<div class="preview">
 			<h2 class="preview__title">card</h2>
-			<div class="c_card">
-				<header class="c_card__header">
-					<img src="https://images.unsplash.com/photo-1492634066426-0cc6c9db9632?fit=crop&w=700&q=80">
-				</header>
+			<a href="#" class="c_card c_card--clickable">
+				<div class="c_card__header">
+					<img class="c_card__image" src="https://images.unsplash.com/photo-1492634066426-0cc6c9db9632?fit=crop&w=700&q=80">
+				</div>
 				<div class="c_card__content">
 					<h3 class="c_card__title">ISA Transfers</h3>
-					<p class="c_card__copy u_margin-bottom--double">Over the last twelve months we have spoken to thousands of clients and customers with regards to their existing ISA’s…</p>
+					<p>Over the last twelve months we have spoken to thousands of clients and customers with regards to their existing ISA’s…</p>
 				</div>
-			</div>
+			</a>
 		</div>
 
 		<div class="preview">
@@ -256,7 +275,7 @@ body {
 				<ul class="c_pagination__list">
 					<li class="c_pagination__item"><a class="c_pagination__link" href="#">Previous</a></li>
 					<li class="c_pagination__item"><a class="c_pagination__link" href="#">1</a></li>
-					<li class="c_pagination__item"><span class="c_pagination__active">2</span></li>
+					<li class="c_pagination__item"><span class="c_pagination__link c_pagination__link--active">2</span></li>
 					<li class="c_pagination__item"><a class="c_pagination__link" href="#">3</a></li>
 					<li class="c_pagination__item"><a class="c_pagination__link" href="#">4</a></li>
 					<li class="c_pagination__item"><a class="c_pagination__link" href="#">Next</a></li>
@@ -301,4 +320,5 @@ body {
 		</div> -->
 
 	</body>
+
 </html>
