@@ -1,0 +1,19 @@
+@mixin icomoon($icon: false) {
+  font-family: "icomoon";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+
+  @if ($icon) {
+    content: $icon;
+  }
+}
+
+@mixin breakpoint($breakpoint, $direction: "up") {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}

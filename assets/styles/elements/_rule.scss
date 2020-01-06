@@ -1,0 +1,17 @@
+hr {
+  border-color: $swatch--border;
+  border-style: solid;
+  border-width: $border-width 0 0 0;
+  height: 0;
+  margin: spacer(3) 0;
+  max-width: spacer(5);
+  overflow: visible;
+
+  @media (min-width: map-get($breakpoints, md)) {
+    margin: spacer(4) 0;
+  }
+
+  &.--full {
+    max-width: none;
+  }
+}

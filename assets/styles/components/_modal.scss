@@ -1,0 +1,52 @@
+$c_modal--background-color: rgba($swatch--emphasis, 0.9);
+$c_modal--padding: 50px;
+$c_modal--z-index: 1000;
+
+$c_modal__window--background-color: $swatch--white;
+$c_modal__window--border-radius: $border-radius;
+$c_modal__window--max-width: 500px;
+$c_modal__window--padding: 50px;
+
+.c_modal {
+  align-items: flex-start;
+  background-color: $c_modal--background-color;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  overflow-y: auto;
+  padding: $c_modal--padding;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: $c_modal--z-index;
+
+  @media (min-width: map-get($breakpoints, md)) {
+    align-items: center;
+  }
+
+  &--reveal {
+    display: flex;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &__window {
+    background-color: $c_modal__window--background-color;
+    border-radius: $c_modal__window--border-radius;
+    max-width: $c_modal__window--max-width;
+    overflow: hidden;
+    padding: $c_modal__window--padding;
+    position: relative;
+  }
+
+  &__close {
+    color: red;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 3;
+  }
+}

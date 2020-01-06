@@ -1,0 +1,101 @@
+$e_button--background: $swatch--action;
+$e_button--border-color: darken($e_button--background, 10%);
+$e_button--border-radius: $border-radius;
+$e_button--border-width: $border-width;
+$e_button--color: $swatch--white;
+$e_button--font-family: $font-family;
+$e_button--font-size: $font-size;
+$e_button--font-weight: $font-weight--bold;
+$e_button--line-height: $line-height;
+$e_button--padding: 1em 2em;
+$e_button--text-align: center;
+$e_button--transition: background-color $duration, color $duration, border-color $duration;
+
+$e_button--hover--background: darken($e_button--background, 5%);
+$e_button--hover--border-color: darken($e_button--border-color, 5%);
+$e_button--hover--color: $e_button--color;
+
+$e_button--focus--background: darken($e_button--background, 10%);
+$e_button--focus--border-color: darken($e_button--border-color, 10%);
+$e_button--focus--color: $e_button--color;
+
+$e_button--text--color: $swatch--action;
+$e_button--text--hover--color: darken($swatch--action, 5%);
+$e_button--text--focus--color: darken($swatch--action, 10%);
+
+$e_button--small--font-size: $font-size--small;
+
+$e_button--large--font-size: $font-size--large;
+
+$e_button--disabled--cursor: not-allowed;
+$e_button--disabled--opacity: 0.5;
+
+.e_button {
+  appearance: none;
+  background: $e_button--background;
+  border-color: $e_button--border-color;
+  border-radius: $e_button--border-radius;
+  border-style: solid;
+  border-width: $e_button--border-width;
+  color: $e_button--color;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $e_button--font-family;
+  font-size: $e_button--font-size;
+  font-weight: $e_button--font-weight;
+  line-height: $e_button--line-height;
+  padding: $e_button--padding;
+  text-align: $e_button--text-align;
+  text-decoration: none;
+  transition: $e_button--transition;
+
+  &:hover {
+    background: $e_button--hover--background;
+    border-color: $e_button--hover--border-color;
+    color: $e_button--hover--color;
+  }
+
+  &:focus {
+    background: $e_button--focus--background;
+    border-color: $e_button--focus--border-color;
+    color: $e_button--focus--color;
+    outline: none;
+  }
+
+  &--block {
+    display: block;
+  }
+
+  &--small {
+    font-size: $e_button--small--font-size;
+  }
+
+  &--large {
+    font-size: $e_button--large--font-size;
+  }
+
+  &--text {
+    background-color: transparent;
+    border-radius: unset;
+    border: none;
+    color: $e_button--text--color;
+    padding: 0;
+
+    &:hover {
+      background-color: transparent;
+      border: none;
+      color: $e_button--text--hover--color;
+    }
+
+    &:focus {
+      background-color: transparent;
+      border: none;
+      color: $e_button--text--focus--color;
+    }
+  }
+
+  &[disabled] {
+    cursor: $e_button--disabled--cursor;
+    opacity: $e_button--disabled--opacity;
+  }
+}

@@ -1,0 +1,27 @@
+.e_html {
+  box-sizing: border-box;
+  color: $swatch--copy;
+  font-family: $font-family;
+  font-size: percentage(14/16);
+  font-variant-ligatures: none;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+
+  @media (min-width: map-get($breakpoints, md)) {
+    font-size: percentage(15/16);
+  }
+
+  @media (min-width: map-get($breakpoints, lg)) {
+    font-size: percentage(16/16);
+  }
+
+  * {
+    &,
+    &:after,
+    &:before {
+      box-sizing: inherit;
+    }
+  }
+}

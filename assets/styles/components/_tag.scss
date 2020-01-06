@@ -1,0 +1,34 @@
+$c_tag--background-color: $swatch--action;
+$c_tag--border-radius: $border-radius;
+$c_tag--color: $swatch--white;
+$c_tag--font-size: $font-size--small;
+$c_tag--font-weight: $font-weight--bold;
+$c_tag--line-height: 1;
+$c_tag--padding: 0.4em 0.6em;
+
+$c_tag--hover--background-color: lighten($c_tag--background-color, 10%);
+$c_tag--hover--color: $c_tag--color;
+
+$c_tag--focus--background-color: lighten($c_tag--background-color, 10%);
+$c_tag--focus--color: $c_tag--color;
+
+.c_tag {
+  background-color: $c_tag--background-color;
+  border-radius: $c_tag--border-radius;
+  color: $c_tag--color;
+  display: inline-block;
+  font-size: $c_tag--font-size;
+  font-weight: $c_tag--font-weight;
+  line-height: $c_tag--line-height;
+  padding: $c_tag--padding;
+
+  &:hover {
+    background-color: $c_tag--hover--background-color;
+    color: $c_tag--hover--color;
+  }
+
+  &:focus {
+    background-color: $c_tag--focus--background-color;
+    color: $c_tag--focus--color;
+  }
+}

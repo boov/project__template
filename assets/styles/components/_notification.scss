@@ -1,0 +1,87 @@
+$c_notification--background-color: $swatch--brand;
+$c_notification--border-radius: $border-radius;
+$c_notification--color: mix($swatch--brand, $swatch--white, 15%);
+$c_notification--font-size: $font-size--small;
+$c_notification--margin: 0 0 1em 0;
+
+$c_notification--positive--background-color: $swatch--positive;
+$c_notification--positive--color: mix($swatch--positive, $swatch--white, 15%);
+
+$c_notification--negative--background-color: $swatch--negative;
+$c_notification--negative--color: mix($swatch--negative, $swatch--white, 15%);
+
+$c_notification__content--padding: 1.5em;
+
+$c_notification__link--color: $swatch--white;
+$c_notification__link--border-bottom: 1px dashed;
+
+$c_notification__link--hover--color: $swatch--white;
+
+$c_notification__close--background-color: rgba(black, 0.05);
+$c_notification__close--color: $swatch--white;
+$c_notification__close--font-size: $font-size;
+$c_notification__close--padding: 1.5em;
+
+$c_notification__close--hover--background-color: rgba(black, 0.1);
+$c_notification__close--hover--color: $swatch--white;
+
+$c_notification__close--focus--background-color: rgba(black, 0.2);
+$c_notification__close--focus--color: $swatch--white;
+
+.c_notification {
+  background-color: $c_notification--background-color;
+  border-radius: $c_notification--border-radius;
+  color: $c_notification--color;
+  display: flex;
+  font-size: $c_notification--font-size;
+  margin: $c_notification--margin;
+  overflow: hidden;
+
+  &--positive {
+    background-color: $c_notification--positive--background-color;
+    color: $c_notification--positive--color;
+  }
+
+  &--negative {
+    background-color: $c_notification--negative--background-color;
+    color: $c_notification--negative--color;
+  }
+
+  &__content {
+    flex-grow: 1;
+    padding: $c_notification__content--padding;
+  }
+
+  &__link {
+    color: $c_notification__link--color;
+    border-bottom: $c_notification__link--border-bottom;
+
+    &:hover {
+      color: $c_notification__link--hover--color;
+    }
+
+    &:focus {
+      color: $c_notification__link--hover--color;
+    }
+  }
+
+  &__close {
+    align-items: center;
+    background-color: $c_notification__close--background-color;
+    color: $c_notification__close--color;
+    display: flex;
+    font-weight: $font-weight--bold;
+    justify-content: center;
+    padding: $c_notification__close--padding;
+
+    &:hover {
+      background-color: $c_notification__close--hover--background-color;
+      color: $c_notification__close--hover--color;
+    }
+
+    &:focus {
+      background-color: $c_notification__close--focus--background-color;
+      color: $c_notification__close--focus--color;
+    }
+  }
+}

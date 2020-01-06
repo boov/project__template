@@ -1,0 +1,29 @@
+$l_container--margin: 0 auto;
+$l_container--max-width: 1300px;
+$l_container--padding: 0 30px;
+$l_container--width: 90%;
+
+$l_container--mini--max-width: $l_container--max-width * 0.5;
+
+$l_container--narrow--max-width: $l_container--max-width * 0.75;
+
+$l_container--wide--max-width: $l_container--max-width * 1.25;
+
+.l_container {
+  margin: $l_container--margin;
+  max-width: $l_container--max-width;
+  padding: $l_container--padding;
+  width: $l_container--width;
+
+  &--mini {
+    max-width: $l_container--mini--max-width;
+  }
+
+  &--narrow {
+    max-width: $l_container--narrow--max-width;
+  }
+
+  &--wide {
+    max-width: $l_container--wide--max-width;
+  }
+}

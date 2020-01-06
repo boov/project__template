@@ -1,0 +1,41 @@
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: auto;
+  max-width: 100%;
+  white-space: nowrap;
+  width: 100%;
+
+  td,
+  th {
+    border-color: $swatch--border;
+    border-style: solid;
+    border-width: 0 0 $border-width--thin 0;
+    padding: spacer(1);
+  }
+
+  th {
+    color: $swatch--emphasis;
+    text-align: inherit;
+  }
+
+  thead {
+    td,
+    th {
+      border-top: none;
+      border-bottom-width: $border-width;
+    }
+  }
+
+  tbody {
+    font-size: $font-size--small;
+  }
+
+  tfoot {
+    td,
+    th {
+      border-bottom: none;
+      border-top-width: $border-width;
+    }
+  }
+}

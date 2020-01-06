@@ -1,0 +1,47 @@
+@font-face {
+  font-display: swap;
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/_assets/fonts/icomoon.eot");
+  src: url("/_assets/fonts/icomoon.eot#iefix") format("embedded-opentype"),
+    url("/_assets/fonts/icomoon.ttf") format("truetype"),
+    url("/_assets/fonts/icomoon.woff") format("woff"),
+    url("/_assets/fonts/icomoon.svg#icomoon") format("svg");
+}
+
+.c_icomoon {
+  @include icomoon;
+
+  &.--tick:before {
+    content: "\f00c";
+  }
+
+  &.--cross:before {
+    content: "\f00d";
+  }
+
+  &.--twitter:before {
+    content: "\f099";
+  }
+
+  &.--facebook:before {
+    content: "\f09a";
+  }
+
+  &.--angle-left:before {
+    content: "\f104";
+  }
+
+  &.--angle-right:before {
+    content: "\f105";
+  }
+
+  &.--instagram:before {
+    content: "\f16d";
+  }
+
+  &.--paypal:before {
+    content: "\f1ed";
+  }
+}

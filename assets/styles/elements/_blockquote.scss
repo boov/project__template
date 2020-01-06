@@ -1,0 +1,31 @@
+$e_blockquote--font-size: $font-size--large;
+$e_blockquote--font-style: italic;
+$e_blockquote--font-weight: $font-weight--light;
+$e_blockquote--margin: 0 0 1em 0;
+$e_blockquote__cite--color: $swatch--subtle;
+$e_blockquote__cite--font-size: $font-size--small;
+$e_blockquote__cite--font-style: normal;
+
+.e_blockquote {
+  font-size: $e_blockquote--font-size;
+  font-style: $e_blockquote--font-style;
+  font-weight: $e_blockquote--font-weight;
+  margin: $e_blockquote--margin;
+
+  &__paragraph {
+    &:before {
+      content: "\201C";
+    }
+
+    &:after {
+      content: "\201D";
+    }
+  }
+
+  &__cite {
+    color: $e_blockquote__cite--color;
+    display: block;
+    font-size: $e_blockquote__cite--font-size;
+    font-style: $e_blockquote__cite--font-style;
+  }
+}

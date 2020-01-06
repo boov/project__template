@@ -1,0 +1,17 @@
+.c_box {
+  background-color: $swatch--white;
+  border-radius: $border-radius;
+  border: $border-width solid transparent;
+  box-shadow: $shadow;
+  display: block;
+  height: 100%;
+  padding: spacer(3);
+
+  @media (min-width: map-get($breakpoints, md)) {
+    padding: spacer(4);
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}

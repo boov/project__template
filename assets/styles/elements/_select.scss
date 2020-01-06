@@ -1,0 +1,17 @@
+$e_select--border-radius: $border-radius;
+$e_select--border: $border-width solid $swatch--border;
+$e_select--font-family: inherit;
+$e_select--font-size: $font-size;
+$e_select--line-height: $line-height;
+$e_select--padding: 1em;
+
+.e_select {
+  border-radius: $e_select--border-radius;
+  border: $e_select--border;
+  display: block;
+  font-family: $e_select--font-family;
+  font-size: $e_select--font-size;
+  line-height: $e_select--line-height;
+  padding: $e_select--padding;
+  width: 100%;
+}

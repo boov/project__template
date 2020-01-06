@@ -1,0 +1,17 @@
+a {
+  color: $swatch--action;
+  text-decoration: none;
+  transition: color $duration ease-in-out;
+
+  &:hover {
+    color: darken($swatch--action, 5%);
+  }
+
+  &:focus {
+    color: darken($swatch--action, 10%);
+    outline-color: $swatch--action;
+    outline-offset: 0.25em;
+    outline-style: solid;
+    outline-width: $border-width;
+  }
+}
