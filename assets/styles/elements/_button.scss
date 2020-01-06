@@ -9,7 +9,8 @@ $e_button--font-weight: $font-weight--bold;
 $e_button--line-height: $line-height;
 $e_button--padding: 1em 2em;
 $e_button--text-align: center;
-$e_button--transition: background-color $duration, color $duration, border-color $duration;
+$e_button--transition: background-color $duration, color $duration,
+  border-color $duration;
 
 $e_button--hover--background: darken($e_button--background, 5%);
 $e_button--hover--border-color: darken($e_button--border-color, 5%);
@@ -62,19 +63,19 @@ $e_button--disabled--opacity: 0.5;
     outline: none;
   }
 
-  &--block {
+  &.--block {
     display: block;
   }
 
-  &--small {
+  &.--small {
     font-size: $e_button--small--font-size;
   }
 
-  &--large {
+  &.--large {
     font-size: $e_button--large--font-size;
   }
 
-  &--text {
+  &.--text {
     background-color: transparent;
     border-radius: unset;
     border: none;

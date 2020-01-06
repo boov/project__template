@@ -17,7 +17,7 @@ $l_flex--breakpoints: $breakpoints;
   margin-left: -($l_flex__column--spacing / 2);
   margin-right: -($l_flex__column--spacing / 2);
 
-  &--collapse {
+  &.--collapse {
     margin-left: 0;
     margin-right: 0;
 
@@ -27,7 +27,7 @@ $l_flex--breakpoints: $breakpoints;
     }
   }
 
-  &--loose {
+  &.--loose {
     margin-left: -($l_flex__column--loose--spacing / 2);
     margin-right: -($l_flex__column--loose--spacing / 2);
 
@@ -37,7 +37,7 @@ $l_flex--breakpoints: $breakpoints;
     }
   }
 
-  &--tight {
+  &.--tight {
     margin-left: -($l_flex__column--tight--spacing / 2);
     margin-right: -($l_flex__column--tight--spacing / 2);
 
@@ -47,77 +47,77 @@ $l_flex--breakpoints: $breakpoints;
     }
   }
 
-  &--align-center {
+  &.--align-center {
     align-items: center;
   }
 
-  &--align-end {
+  &.--align-end {
     align-items: flex-end;
   }
 
-  &--align-start {
+  &.--align-start {
     align-items: flex-start;
   }
 
-  &--justify-center {
+  &.--justify-center {
     justify-content: center;
   }
 
-  &--justify-end {
+  &.--justify-end {
     justify-content: flex-end;
   }
 
-  &--justify-start {
+  &.--justify-start {
     justify-content: flex-start;
   }
 
-  &--justify-around {
+  &.--justify-around {
     justify-content: space-around;
   }
 
-  &--justify-between {
+  &.--justify-between {
     justify-content: space-between;
   }
 
-  &--justify-evenly {
+  &.--justify-evenly {
     justify-content: space-evenly;
   }
 
   @each $breakpoint-name, $breakpoint-size in $l_flex--breakpoints {
     @media (min-width: $breakpoint-size) {
-      &--align-center--#{$breakpoint-name} {
+      &.--align-center--#{$breakpoint-name} {
         align-items: center;
       }
 
-      &--align-end--#{$breakpoint-name} {
+      &.--align-end--#{$breakpoint-name} {
         align-items: flex-end;
       }
 
-      &--align-start--#{$breakpoint-name} {
+      &.--align-start--#{$breakpoint-name} {
         align-items: flex-start;
       }
 
-      &--justify-center--#{$breakpoint-name} {
+      &.--justify-center--#{$breakpoint-name} {
         justify-content: center;
       }
 
-      &--justify-end--#{$breakpoint-name} {
+      &.--justify-end--#{$breakpoint-name} {
         justify-content: flex-end;
       }
 
-      &--justify-start--#{$breakpoint-name} {
+      &.--justify-start--#{$breakpoint-name} {
         justify-content: flex-start;
       }
 
-      &--justify-around--#{$breakpoint-name} {
+      &.--justify-around--#{$breakpoint-name} {
         justify-content: space-around;
       }
 
-      &--justify-between--#{$breakpoint-name} {
+      &.--justify-between--#{$breakpoint-name} {
         justify-content: space-between;
       }
 
-      &--justify-evenly--#{$breakpoint-name} {
+      &.--justify-evenly--#{$breakpoint-name} {
         justify-content: space-evenly;
       }
     }
@@ -132,34 +132,34 @@ $l_flex--breakpoints: $breakpoints;
     padding-right: ($l_flex__column--spacing / 2);
 
     // Root
-    &--shrink {
+    &.--shrink {
       flex-basis: auto;
       flex-grow: 0;
       flex-shrink: 1;
     }
 
-    &--first {
+    &.--first {
       order: -1;
     }
 
-    &--last {
+    &.--last {
       order: $l_flex__column--count + 1;
     }
 
-    &--align-center {
+    &.--align-center {
       align-self: center;
     }
 
-    &--align-end {
+    &.--align-end {
       align-self: flex-end;
     }
 
-    &--align-start {
+    &.--align-start {
       align-self: flex-start;
     }
 
     @for $column from 1 through $l_flex__column--count {
-      &--span-#{$column} {
+      &.--span-#{$column} {
         flex-basis: percentage($column / $l_flex__column--count);
         max-width: percentage($column / $l_flex__column--count);
         flex-grow: 0;
@@ -167,7 +167,7 @@ $l_flex--breakpoints: $breakpoints;
     }
 
     @for $column from 1 through $l_flex__column--count - 1 {
-      &--offset-#{$column} {
+      &.--offset-#{$column} {
         margin-left: percentage($column / $l_flex__column--count);
       }
     }
@@ -175,40 +175,40 @@ $l_flex--breakpoints: $breakpoints;
     // Breakpoints
     @each $breakpoint-name, $breakpoint-size in $l_flex--breakpoints {
       @media (min-width: $breakpoint-size) {
-        &--#{$breakpoint-name} {
+        &.--#{$breakpoint-name} {
           flex-basis: 0;
           flex-grow: 1;
           flex-shrink: 0;
         }
 
-        &--shrink--#{$breakpoint-name} {
+        &.--shrink--#{$breakpoint-name} {
           flex-basis: auto;
           flex-grow: 0;
           flex-shrink: 1;
         }
 
-        &--first--#{$breakpoint-name} {
+        &.--first--#{$breakpoint-name} {
           order: -1;
         }
 
-        &--last--#{$breakpoint-name} {
+        &.--last--#{$breakpoint-name} {
           order: $l_flex__column--count + 1;
         }
 
-        &--align-center--#{$breakpoint-name} {
+        &.--align-center--#{$breakpoint-name} {
           align-self: center;
         }
 
-        &--align-end--#{$breakpoint-name} {
+        &.--align-end--#{$breakpoint-name} {
           align-self: flex-end;
         }
 
-        &--align-start--#{$breakpoint-name} {
+        &.--align-start--#{$breakpoint-name} {
           align-self: flex-start;
         }
 
         @for $column from 1 through $l_flex__column--count {
-          &--span-#{$column}--#{$breakpoint-name} {
+          &.--span-#{$column}--#{$breakpoint-name} {
             flex-basis: percentage($column / $l_flex__column--count);
             max-width: percentage($column / $l_flex__column--count);
             flex-grow: 0;
@@ -216,7 +216,7 @@ $l_flex--breakpoints: $breakpoints;
         }
 
         @for $column from 1 through $l_flex__column--count - 1 {
-          &--offset-#{$column}--#{$breakpoint-name} {
+          &.--offset-#{$column}--#{$breakpoint-name} {
             margin-left: percentage($column / $l_flex__column--count);
           }
         }

@@ -1,9 +1,8 @@
-node_modules
-public
-
 .DS_Store
 .Spotlight-V100
 .Trashes
 ._*
 Thumbs.db
 ehthumbs.db
+node_modules
+public

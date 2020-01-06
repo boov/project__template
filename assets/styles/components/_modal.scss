@@ -27,7 +27,7 @@ $c_modal__window--padding: 50px;
     align-items: center;
   }
 
-  &--reveal {
+  &.--reveal {
     display: flex;
     opacity: 1;
     pointer-events: all;

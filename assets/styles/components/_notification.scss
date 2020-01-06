@@ -37,12 +37,12 @@ $c_notification__close--focus--color: $swatch--white;
   margin: $c_notification--margin;
   overflow: hidden;
 
-  &--positive {
+  &.--positive {
     background-color: $c_notification--positive--background-color;
     color: $c_notification--positive--color;
   }
 
-  &--negative {
+  &.--negative {
     background-color: $c_notification--negative--background-color;
     color: $c_notification--negative--color;
   }

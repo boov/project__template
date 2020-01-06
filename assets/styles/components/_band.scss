@@ -3,15 +3,15 @@ $c_band__padding: 4rem 0;
 .c_band {
   padding: $c_band__padding;
 
-  &--collapse-top {
+  &.--collapse-top {
     padding-top: 0;
   }
 
-  &--collapse-bottom {
+  &.--collapse-bottom {
     padding-bottom: 0;
   }
 
-  &--collapse {
+  &.--collapse {
     padding-top: 0;
     padding-bottom: 0;
   }

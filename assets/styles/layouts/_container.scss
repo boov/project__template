@@ -15,15 +15,15 @@ $l_container--wide--max-width: $l_container--max-width * 1.25;
   padding: $l_container--padding;
   width: $l_container--width;
 
-  &--mini {
+  &.--mini {
     max-width: $l_container--mini--max-width;
   }
 
-  &--narrow {
+  &.--narrow {
     max-width: $l_container--narrow--max-width;
   }
 
-  &--wide {
+  &.--wide {
     max-width: $l_container--wide--max-width;
   }
 }

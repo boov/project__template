@@ -22,36 +22,36 @@ $e_heading--underline--width: 70px;
   line-height: $e_heading--line-height;
   margin: $e_heading--margin;
 
-  &--h1 {
+  &.--h1 {
     font-size: $e_heading--h1--font-size;
   }
 
-  &--h2 {
+  &.--h2 {
     font-size: $e_heading--h2--font-size;
   }
 
-  &--h3 {
+  &.--h3 {
     font-size: $e_heading--h3--font-size;
   }
 
-  &--h4 {
+  &.--h4 {
     font-size: $e_heading--h4--font-size;
   }
 
-  &--h5 {
+  &.--h5 {
     font-size: $e_heading--h5--font-size;
   }
 
-  &--h6 {
+  &.--h6 {
     font-size: $e_heading--h6--font-size;
   }
 
-  &--spacious {
+  &.--spacious {
     letter-spacing: $e_heading--spacious--spacing;
     text-transform: uppercase;
   }
 
-  &--underline {
+  &.--underline {
     margin-bottom: $e_heading--underline--spacing;
     padding-bottom: $e_heading--underline--spacing;
     position: relative;

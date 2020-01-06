@@ -29,7 +29,7 @@ $e_input--large--font-size: $font-size--large;
     color: $e_input--placeholder--color;
   }
 
-  &--common {
+  &.--common {
     background-color: $e_input--background-color;
     border-color: $e_input--border-color;
     border-radius: $e_input--border-radius;
@@ -46,36 +46,36 @@ $e_input--large--font-size: $font-size--large;
     }
   }
 
-  &--bool {
+  &.--bool {
     margin: 0;
     padding: 0;
   }
 
-  &--textarea {
+  &.--textarea {
     resize: vertical;
   }
 
-  &--select {
+  &.--select {
     // ---
   }
 
-  &--color {
+  &.--color {
     // --
   }
 
-  &--file {
+  &.--file {
     // --
   }
 
-  &--range {
+  &.--range {
     // --
   }
 
-  &--small {
+  &.--small {
     font-size: $e_input--small--font-size;
   }
 
-  &--large {
+  &.--large {
     font-size: $e_input--large--font-size;
   }
 }

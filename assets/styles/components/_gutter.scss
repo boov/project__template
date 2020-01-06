@@ -17,11 +17,11 @@ $c_gutter--z-index: 1000;
   width: $c_gutter--width;
   z-index: $c_gutter--z-index;
 
-  &--reveal {
+  &.--reveal {
     visibility: visible;
   }
 
-  &--left {
+  &.--left {
     left: -$c_gutter--width;
 
     &#{$this}--reveal {
@@ -29,7 +29,7 @@ $c_gutter--z-index: 1000;
     }
   }
 
-  &--right {
+  &.--right {
     right: -$c_gutter--width;
 
     &#{$this}--reveal {
