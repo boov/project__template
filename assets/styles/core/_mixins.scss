@@ -1,4 +1,4 @@
-@mixin icomoon($icon: false) {
+@mixin icomoon($content: false) {
   font-family: "icomoon";
   font-style: normal;
   font-variant: normal;
@@ -7,8 +7,8 @@
   speak: none;
   text-transform: none;
 
-  @if ($icon) {
-    content: $icon;
+  @if ($content) {
+    content: $content;
   }
 }
 
@@ -16,4 +16,88 @@
   @media (min-width: map-get($breakpoints, $breakpoint)) {
     @content;
   }
+}
+
+@mixin iconify($width: 0, $height: 0) {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  @if ($height == 0) {
+    height: $width;
+  } @else {
+    height: $height;
+  }
+  justify-content: center;
+  width: $width;
+}
+
+@mixin position(
+  $position: relative,
+  $top: auto,
+  $right: auto,
+  $bottom: auto,
+  $left: auto,
+  $z-index: 0
+) {
+  position: $position;
+
+  @if $top != auto {
+    top: $top;
+  }
+
+  @if $right != auto {
+    right: $right;
+  }
+
+  @if $bottom != auto {
+    bottom: $bottom;
+  }
+
+  @if $left != auto {
+    left: $left;
+  }
+
+  @if $z-index != 0 {
+    z-index: $z-index;
+  }
+}
+
+@mixin absolute(
+  $top: auto,
+  $right: auto,
+  $bottom: auto,
+  $left: auto,
+  $z-index: 0
+) {
+  @include position(absolute, $top, $right, $bottom, $left, $z-index);
+}
+
+@mixin fixed(
+  $top: auto,
+  $right: auto,
+  $bottom: auto,
+  $left: auto,
+  $z-index: 0
+) {
+  @include position(fixed, $top, $right, $bottom, $left, $z-index);
+}
+
+@mixin relative(
+  $top: auto,
+  $right: auto,
+  $bottom: auto,
+  $left: auto,
+  $z-index: 0
+) {
+  @include position(relative, $top, $right, $bottom, $left, $z-index);
+}
+
+@mixin sticky(
+  $top: auto,
+  $right: auto,
+  $bottom: auto,
+  $left: auto,
+  $z-index: 0
+) {
+  @include position(sticky, $top, $right, $bottom, $left, $z-index);
 }
