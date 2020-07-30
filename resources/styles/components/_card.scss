@@ -1,39 +1,13 @@
-$c_card--background-color: $swatch--white;
-$c_card--border-radius: $border-radius;
-$c_card--border: $border-width solid $swatch--border;
-
-$c_card--clickable--hover--border-color: $swatch--action;
-$c_card--clickable__content--color: $swatch--copy;
-
-$c_card__header--background-color: $swatch--brand;
-
-$c_card__content--padding: 2rem;
-
-$c_card__title--font-size: $font-size--large;
-$c_card__title--margin: 0 0 0.5em 0;
-
 .c_card {
-  $this: &;
-  background-color: $c_card--background-color;
-  border-radius: $c_card--border-radius;
-  border: $c_card--border;
+  @include swatch("background-color", "background");
+  @include swatch("color", "copy");
+  border-radius: $border-radius;
+  box-shadow: $shadow;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-
-  &.--clickable {
-    &:hover,
-    &:focus {
-      border-color: $c_card--clickable--hover--border-color;
-    }
-
-    #{$this}__content {
-      color: $c_card--clickable__content--color;
-    }
-  }
 
   &__header {
-    background-color: $c_card__header--background-color;
+    // background-color: $swatch--brand;
     min-height: 10px;
   }
 
@@ -43,7 +17,7 @@ $c_card__title--margin: 0 0 0.5em 0;
   }
 
   &__content {
-    padding: $c_card__content--padding;
+    padding: 2rem;
 
     > *:last-child {
       margin-bottom: 0;
@@ -51,7 +25,7 @@ $c_card__title--margin: 0 0 0.5em 0;
   }
 
   &__title {
-    font-size: $c_card__title--font-size;
-    margin: $c_card__title--margin;
+    font-size: $font-size--large;
+    margin: 0 0 0.5em 0;
   }
 }

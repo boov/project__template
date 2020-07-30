@@ -1,5 +1,11 @@
-@mixin icomoon($content: false) {
-  font-family: "icomoon";
+@mixin breakpoint($breakpoint, $direction: "up") {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin icon-font($content: false, $font: "icomoon") {
+  font-family: $font;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -12,92 +18,13 @@
   }
 }
 
-@mixin breakpoint($breakpoint, $direction: "up") {
-  @media (min-width: map-get($breakpoints, $breakpoint)) {
-    @content;
-  }
-}
+@mixin swatch($property, $swatch) {
+  $default: map-get($palettes, default);
 
-@mixin iconify($width: 0, $height: 0) {
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  @if ($height == 0) {
-    height: $width;
+  @if (map-has-key($default, $swatch)) {
+    #{$property}: map-get($default, $swatch);
+    #{$property}: var(--#{$swatch});
   } @else {
-    height: $height;
+    @warn "'#{$swatch}' passed to swatch() is not a valid swatch name.";
   }
-  justify-content: center;
-  width: $width;
-}
-
-@mixin position(
-  $position: relative,
-  $top: auto,
-  $right: auto,
-  $bottom: auto,
-  $left: auto,
-  $z-index: 0
-) {
-  position: $position;
-
-  @if $top != auto {
-    top: $top;
-  }
-
-  @if $right != auto {
-    right: $right;
-  }
-
-  @if $bottom != auto {
-    bottom: $bottom;
-  }
-
-  @if $left != auto {
-    left: $left;
-  }
-
-  @if $z-index != 0 {
-    z-index: $z-index;
-  }
-}
-
-@mixin absolute(
-  $top: auto,
-  $right: auto,
-  $bottom: auto,
-  $left: auto,
-  $z-index: 0
-) {
-  @include position(absolute, $top, $right, $bottom, $left, $z-index);
-}
-
-@mixin fixed(
-  $top: auto,
-  $right: auto,
-  $bottom: auto,
-  $left: auto,
-  $z-index: 0
-) {
-  @include position(fixed, $top, $right, $bottom, $left, $z-index);
-}
-
-@mixin relative(
-  $top: auto,
-  $right: auto,
-  $bottom: auto,
-  $left: auto,
-  $z-index: 0
-) {
-  @include position(relative, $top, $right, $bottom, $left, $z-index);
-}
-
-@mixin sticky(
-  $top: auto,
-  $right: auto,
-  $bottom: auto,
-  $left: auto,
-  $z-index: 0
-) {
-  @include position(sticky, $top, $right, $bottom, $left, $z-index);
 }

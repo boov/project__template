@@ -1,7 +1,4 @@
-$e_mark--background-color: rgba(#fdd835, 0.4);
-$e_mark--padding: 0.2em 0.3em;
-
-.e_mark {
-  background-color: $e_mark--background-color;
-  padding: $e_mark--padding;
+mark {
+  background-color: #fdd835;
+  padding: 0.2em 0.3em;
 }

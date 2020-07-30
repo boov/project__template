@@ -1,4 +1,6 @@
 .c_main {
+  @include swatch("background-color", "background");
+  @include swatch("color", "copy");
   display: flex;
   flex-direction: column;
   flex-grow: 1;

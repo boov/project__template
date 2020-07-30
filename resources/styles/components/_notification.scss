@@ -1,87 +1,57 @@
-$c_notification--background-color: $swatch--brand;
-$c_notification--border-radius: $border-radius;
-$c_notification--color: mix($swatch--brand, $swatch--white, 15%);
-$c_notification--font-size: $font-size--small;
-$c_notification--margin: 0 0 1em 0;
-
-$c_notification--positive--background-color: $swatch--positive;
-$c_notification--positive--color: mix($swatch--positive, $swatch--white, 15%);
-
-$c_notification--negative--background-color: $swatch--negative;
-$c_notification--negative--color: mix($swatch--negative, $swatch--white, 15%);
-
-$c_notification__content--padding: 1.5em;
-
-$c_notification__link--color: $swatch--white;
-$c_notification__link--border-bottom: 1px dashed;
-
-$c_notification__link--hover--color: $swatch--white;
-
-$c_notification__close--background-color: rgba(black, 0.05);
-$c_notification__close--color: $swatch--white;
-$c_notification__close--font-size: $font-size;
-$c_notification__close--padding: 1.5em;
-
-$c_notification__close--hover--background-color: rgba(black, 0.1);
-$c_notification__close--hover--color: $swatch--white;
-
-$c_notification__close--focus--background-color: rgba(black, 0.2);
-$c_notification__close--focus--color: $swatch--white;
-
 .c_notification {
-  background-color: $c_notification--background-color;
-  border-radius: $c_notification--border-radius;
-  color: $c_notification--color;
+  // background-color: $swatch--brand;
+  border-radius: $border-radius;
+  // color: mix($swatch--brand, white, 15%);
   display: flex;
-  font-size: $c_notification--font-size;
-  margin: $c_notification--margin;
+  font-size: $font-size;
+  margin: 0 0 1em 0;
   overflow: hidden;
 
   &.--positive {
-    background-color: $c_notification--positive--background-color;
-    color: $c_notification--positive--color;
+    background-color: $s_global--positive;
+    color: mix($s_global--positive, white, 15%);
   }
 
   &.--negative {
-    background-color: $c_notification--negative--background-color;
-    color: $c_notification--negative--color;
+    background-color: $s_global--negative;
+    color: mix($s_global--negative, white, 15%);
   }
 
   &__content {
     flex-grow: 1;
-    padding: $c_notification__content--padding;
+    padding: 1.5em;
   }
 
   &__link {
-    color: $c_notification__link--color;
-    border-bottom: $c_notification__link--border-bottom;
+    color: white;
+    border-bottom: 1px dashed;
 
     &:hover {
-      color: $c_notification__link--hover--color;
+      color: white;
     }
 
     &:focus {
-      color: $c_notification__link--hover--color;
+      color: white;
     }
   }
 
   &__close {
     align-items: center;
-    background-color: $c_notification__close--background-color;
-    color: $c_notification__close--color;
+    background-color: rgba(black, 0.05);
+    color: white;
     display: flex;
     font-weight: $font-weight--bold;
     justify-content: center;
-    padding: $c_notification__close--padding;
+    padding: 1.5em;
 
     &:hover {
-      background-color: $c_notification__close--hover--background-color;
-      color: $c_notification__close--hover--color;
+      background-color: rgba(black, 0.1);
+      color: white;
     }
 
     &:focus {
-      background-color: $c_notification__close--focus--background-color;
-      color: $c_notification__close--focus--color;
+      background-color: rgba(black, 0.2);
+      color: white;
     }
   }
 }

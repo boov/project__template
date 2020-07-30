@@ -1,28 +1,23 @@
-$c_gutter--background-color: $swatch--emphasis;
-$c_gutter--max-width: 90%;
-$c_gutter--transition: left $duration, right $duration;
-$c_gutter--width: 300px;
-$c_gutter--z-index: 1000;
-
 .c_gutter {
   $this: &;
-  background-color: $c_gutter--background-color;
+  $width: 300px;
+  @include swatch("background-color", "background");
   bottom: 0;
-  max-width: $c_gutter--max-width;
+  max-width: 90%;
   position: fixed;
-  right: -$c_gutter--width;
+  right: -$width;
   top: 0;
-  transition: $c_gutter--transition;
+  transition: left $duration, right $duration;
   visibility: hidden;
-  width: $c_gutter--width;
-  z-index: $c_gutter--z-index;
+  width: $width;
+  z-index: 1000;
 
   &.--reveal {
     visibility: visible;
   }
 
   &.--left {
-    left: -$c_gutter--width;
+    left: -$width;
 
     &#{$this}--reveal {
       left: 0;
@@ -30,7 +25,7 @@ $c_gutter--z-index: 1000;
   }
 
   &.--right {
-    right: -$c_gutter--width;
+    right: -$width;
 
     &#{$this}--reveal {
       right: 0;

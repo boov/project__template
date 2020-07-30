@@ -1,29 +1,25 @@
-$l_container--margin: 0 auto;
-$l_container--max-width: 1300px;
-$l_container--padding: 0 30px;
-$l_container--width: 90%;
-
-$l_container--mini--max-width: $l_container--max-width * 0.5;
-
-$l_container--narrow--max-width: $l_container--max-width * 0.75;
-
-$l_container--wide--max-width: $l_container--max-width * 1.25;
+$l_container--padding: 30px;
 
 .l_container {
-  margin: $l_container--margin;
-  max-width: $l_container--max-width;
-  padding: $l_container--padding;
-  width: $l_container--width;
+  margin: 0 auto;
+  max-width: map-get($breakpoints, xl) + ($l_container--padding * 2);
+  padding: 0 $l_container--padding;
+  width: 100%;
 
-  &.--mini {
-    max-width: $l_container--mini--max-width;
+  @include breakpoint("md") {
+    width: 95%;
   }
 
-  &.--narrow {
-    max-width: $l_container--narrow--max-width;
+  &.--full {
+    max-width: map-get($breakpoints, site);
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 
-  &.--wide {
-    max-width: $l_container--wide--max-width;
+  @each $breakpoint-name, $breakpoint-size in map-remove($breakpoints, xl) {
+    &.--#{$breakpoint-name} {
+      max-width: $breakpoint-size + ($l_container--padding * 2);
+    }
   }
 }

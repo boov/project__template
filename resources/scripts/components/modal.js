@@ -1,7 +1,7 @@
 export default class Modal {
-  constructor() {
-    this.modalsToggles = document.querySelectorAll(".js_toggle-modal");
-    this.modals = document.querySelectorAll(".c_modal");
+  constructor(toggle, target) {
+    this.toggle = document.querySelector(toggle);
+    this.target = document.querySelector(target);
 
     this.modalsToggles.forEach(function(modalsToggle) {
       modalsToggle.addEventListener("click", function(event) {
@@ -21,4 +21,4 @@ export default class Modal {
         });
     });
   }
-};
+}

@@ -1,6 +1,8 @@
-.e_html {
+html {
+  @extend .\~\~default;
+  @include swatch("background-color", "background");
+  @include swatch("color", "copy");
   box-sizing: border-box;
-  color: $swatch--copy;
   font-family: $font-family;
   font-size: percentage(14/16);
   font-variant-ligatures: none;
@@ -9,12 +11,20 @@
   scroll-behavior: smooth;
   text-size-adjust: 100%;
 
-  @media (min-width: map-get($breakpoints, md)) {
+  @include breakpoint("md") {
     font-size: percentage(15/16);
   }
 
-  @media (min-width: map-get($breakpoints, lg)) {
+  @include breakpoint("lg") {
     font-size: percentage(16/16);
+  }
+
+  @include breakpoint("xl") {
+    font-size: percentage(17/16);
+  }
+
+  @include breakpoint("xxl") {
+    font-size: percentage(18/16);
   }
 
   * {

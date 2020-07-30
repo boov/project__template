@@ -1,5 +1,3 @@
-$u_display--breakpoints: $breakpoints;
-
 $u_display--utilities: (block, inline, inline-block, none);
 
 @each $utility-value in $u_display--utilities {
@@ -9,7 +7,7 @@ $u_display--utilities: (block, inline, inline-block, none);
 }
 
 @each $utility-value in $u_display--utilities {
-  @each $breakpoint-name, $breakpoint-size in $u_display--breakpoints {
+  @each $breakpoint-name, $breakpoint-size in $breakpoints {
     @media (min-width: $breakpoint-size) {
       .u_display--#{$utility-value}--#{$breakpoint-name} {
         display: $utility-value !important;

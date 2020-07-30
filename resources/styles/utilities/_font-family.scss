@@ -1,5 +1,3 @@
-$u_font-family--breakpoints: $breakpoints;
-
 $u_font-family--utilities: (
   default: $font-family,
   display: $font-family--display,
@@ -13,7 +11,7 @@ $u_font-family--utilities: (
 }
 
 @each $utility-key, $utility-value in $u_font-family--utilities {
-  @each $breakpoint-name, $breakpoint-size in $u_font-family--breakpoints {
+  @each $breakpoint-name, $breakpoint-size in $breakpoints {
     @media (min-width: $breakpoint-size) {
       .u_font-family--#{$utility-key}--#{$breakpoint-name} {
         font-family: $utility-value !important;

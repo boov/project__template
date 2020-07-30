@@ -1,0 +1,13 @@
+.c_trim {
+  @include swatch("background-color", "background");
+  @include swatch("border-color", "border");
+  @include swatch("color", "copy");
+  border-style: solid;
+  border-width: $border-width 0 0 0;
+  font-size: $font-size--tiny;
+  padding: spacer(4) 0;
+
+  @include breakpoint("sm") {
+    padding: spacer(5) 0;
+  }
+}

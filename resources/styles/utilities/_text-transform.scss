@@ -1,6 +1,4 @@
-$u_text-transform--breakpoints: $breakpoints;
-
-$u_text-transform--utilities: (capitalize, lowercase, uppercase);
+$u_text-transform--utilities: (none, capitalize, lowercase, uppercase);
 
 @each $utility-value in $u_text-transform--utilities {
   .u_text-transform--#{$utility-value} {
@@ -9,7 +7,7 @@ $u_text-transform--utilities: (capitalize, lowercase, uppercase);
 }
 
 @each $utility-value in $u_text-transform--utilities {
-  @each $breakpoint-name, $breakpoint-size in $u_text-transform--breakpoints {
+  @each $breakpoint-name, $breakpoint-size in $breakpoints {
     @media (min-width: $breakpoint-size) {
       .u_text-transform--#{$utility-value}--#{$breakpoint-name} {
         text-transform: $utility-value !important;

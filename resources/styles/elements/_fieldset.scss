@@ -1,27 +1,13 @@
-$e_fieldset--border-color: $swatch--border;
-$e_fieldset--border-radius: $border-radius;
-$e_fieldset--border-style: solid;
-$e_fieldset--border-width: $border-width;
-$e_fieldset--margin: 0 0 1em 0;
-$e_fieldset--padding: 2em;
-$e_fieldset__legend--color: $swatch--emphasis;
-$e_fieldset__legend--font-size: $font-size--large;
-$e_fieldset__legend--font-weight: $font-weight--bold;
-$e_fieldset__legend--padding: 0 0.5em;
+fieldset {
+  border-radius: $border-radius;
+  // border: $border-width solid $swatch--border;
+  margin: 0 0 1em 0;
+  padding: 2em;
 
-.e_fieldset {
-  border-color: $e_fieldset--border-color;
-  border-radius: $e_fieldset--border-radius;
-  border-style: $e_fieldset--border-style;
-  border-width: $e_fieldset--border-width;
-  margin: $e_fieldset--margin;
-  min-width: 0;
-  padding: $e_fieldset--padding;
-
-  &__legend {
-    color: $e_fieldset__legend--color;
-    font-size: $e_fieldset__legend--font-size;
-    font-weight: $e_fieldset__legend--font-weight;
-    padding: $e_fieldset__legend--padding;
+  legend {
+    @include swatch("color", "copy--bold");
+    font-size: $font-size--large;
+    font-weight: $font-weight--bold;
+    padding: 0 0.5em;
   }
 }

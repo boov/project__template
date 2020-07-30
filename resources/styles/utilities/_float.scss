@@ -1,5 +1,3 @@
-$u_float--breakpoints: $breakpoints;
-
 $u_float--utilities: (left, none, right);
 
 @each $utility-value in $u_float--utilities {
@@ -9,7 +7,7 @@ $u_float--utilities: (left, none, right);
 }
 
 @each $utility-value in $u_float--utilities {
-  @each $breakpoint-name, $breakpoint-size in $u_float--breakpoints {
+  @each $breakpoint-name, $breakpoint-size in $breakpoints {
     @media (min-width: $breakpoint-size) {
       .u_float--#{$utility-value}--#{$breakpoint-name} {
         float: $utility-value !important;

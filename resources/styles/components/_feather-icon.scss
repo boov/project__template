@@ -1,4 +1,4 @@
-.v_feather-icon {
+.c_feather-icon {
   fill: none;
   height: 24px;
   stroke-linecap: round;
@@ -10,9 +10,5 @@
   &.--large {
     height: 48px;
     width: 48px;
-  }
-
-  &.--spin {
-    animation: spin 2s linear infinite;
   }
 }

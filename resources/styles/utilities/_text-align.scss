@@ -1,5 +1,3 @@
-$u_text-align--breakpoints: $breakpoints;
-
 $u_text-align--utilities: (center, justify, left, right);
 
 @each $utility-value in $u_text-align--utilities {
@@ -9,7 +7,7 @@ $u_text-align--utilities: (center, justify, left, right);
 }
 
 @each $utility-value in $u_text-align--utilities {
-  @each $breakpoint-name, $breakpoint-size in $u_text-align--breakpoints {
+  @each $breakpoint-name, $breakpoint-size in $breakpoints {
     @media (min-width: $breakpoint-size) {
       .u_text-align--#{$utility-value}--#{$breakpoint-name} {
         text-align: $utility-value !important;

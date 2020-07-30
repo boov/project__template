@@ -1,3 +1,8 @@
+$l_flex--count: 12;
+$l_flex--gap--tight: 18px;
+$l_flex--gap--comfortable: 30px;
+$l_flex--gap--loose: 48px;
+
 .l_flex {
   $this: &;
   display: flex;
@@ -5,26 +10,36 @@
   flex-wrap: wrap;
   list-style: none;
   margin-bottom: 0;
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -($l_flex--gap--comfortable / 2);
+  margin-right: -($l_flex--gap--comfortable / 2);
 
-  &.--loose {
-    margin-left: -22.5px;
-    margin-right: -22.5px;
+  &.--tight {
+    margin-left: -($l_flex--gap--tight / 2);
+    margin-right: -($l_flex--gap--tight / 2);
 
-    #{$this}__column {
-      padding-left: 22.5px;
-      padding-right: 22.5px;
+    #{$this}__item {
+      padding-left: $l_flex--gap--tight / 2;
+      padding-right: $l_flex--gap--tight / 2;
     }
   }
 
-  &.--tight {
-    margin-left: -7.5px;
-    margin-right: -7.5px;
+  &.--comfortable {
+    margin-left: -($l_flex--gap--comfortable / 2);
+    margin-right: -($l_flex--gap--comfortable / 2);
 
-    #{$this}__column {
-      padding-left: 7.5px;
-      padding-right: 7.5px;
+    #{$this}__item {
+      padding-left: $l_flex--gap--comfortable / 2;
+      padding-right: $l_flex--gap--comfortable / 2;
+    }
+  }
+
+  &.--loose {
+    margin-left: -($l_flex--gap--loose / 2);
+    margin-right: -($l_flex--gap--loose / 2);
+
+    #{$this}__item {
+      padding-left: $l_flex--gap--loose / 2;
+      padding-right: $l_flex--gap--loose / 2;
     }
   }
 
@@ -66,6 +81,36 @@
 
   @each $breakpoint-name, $breakpoint-size in $breakpoints {
     @media (min-width: $breakpoint-size) {
+      &.--tight--#{$breakpoint-name} {
+        margin-left: -($l_flex--gap--tight / 2);
+        margin-right: -($l_flex--gap--tight / 2);
+
+        #{$this}__item {
+          padding-left: $l_flex--gap--tight / 2;
+          padding-right: $l_flex--gap--tight / 2;
+        }
+      }
+
+      &.--comfortable--#{$breakpoint-name} {
+        margin-left: -($l_flex--gap--comfortable / 2);
+        margin-right: -($l_flex--gap--comfortable / 2);
+
+        #{$this}__item {
+          padding-left: $l_flex--gap--comfortable / 2;
+          padding-right: $l_flex--gap--comfortable / 2;
+        }
+      }
+
+      &.--loose--#{$breakpoint-name} {
+        margin-left: -($l_flex--gap--loose / 2);
+        margin-right: -($l_flex--gap--loose / 2);
+
+        #{$this}__item {
+          padding-left: $l_flex--gap--loose / 2;
+          padding-right: $l_flex--gap--loose / 2;
+        }
+      }
+
       &.--align-center--#{$breakpoint-name} {
         align-items: center;
       }
@@ -104,15 +149,14 @@
     }
   }
 
-  &__column {
+  &__item {
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 0;
     min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: $l_flex--gap--comfortable / 2;
+    padding-right: $l_flex--gap--comfortable / 2;
 
-    // Root
     &.--shrink {
       flex-basis: auto;
       flex-grow: 0;
@@ -124,7 +168,7 @@
     }
 
     &.--last {
-      order: 12 + 1;
+      order: $l_flex--count + 1;
     }
 
     &.--align-center {
@@ -139,21 +183,20 @@
       align-self: flex-start;
     }
 
-    @for $column from 1 through 12 {
+    @for $column from 1 through $l_flex--count {
       &.--span-#{$column} {
-        flex-basis: percentage($column / 12);
-        max-width: percentage($column / 12);
+        flex-basis: percentage($column / $l_flex--count);
+        max-width: percentage($column / $l_flex--count);
         flex-grow: 0;
       }
     }
 
-    @for $column from 1 through 12 - 1 {
+    @for $column from 1 through $l_flex--count - 1 {
       &.--offset-#{$column} {
-        margin-left: percentage($column / 12);
+        margin-left: percentage($column / $l_flex--count);
       }
     }
 
-    // Breakpoints
     @each $breakpoint-name, $breakpoint-size in $breakpoints {
       @media (min-width: $breakpoint-size) {
         &.--#{$breakpoint-name} {
@@ -173,7 +216,7 @@
         }
 
         &.--last--#{$breakpoint-name} {
-          order: 12 + 1;
+          order: $l_flex--count + 1;
         }
 
         &.--align-center--#{$breakpoint-name} {
@@ -188,17 +231,17 @@
           align-self: flex-start;
         }
 
-        @for $column from 1 through 12 {
+        @for $column from 1 through $l_flex--count {
           &.--span-#{$column}--#{$breakpoint-name} {
-            flex-basis: percentage($column / 12);
-            max-width: percentage($column / 12);
+            flex-basis: percentage($column / $l_flex--count);
+            max-width: percentage($column / $l_flex--count);
             flex-grow: 0;
           }
         }
 
-        @for $column from 1 through 12 - 1 {
+        @for $column from 1 through $l_flex--count - 1 {
           &.--offset-#{$column}--#{$breakpoint-name} {
-            margin-left: percentage($column / 12);
+            margin-left: percentage($column / $l_flex--count);
           }
         }
       }

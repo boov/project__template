@@ -1,34 +1,20 @@
-$c_badge--background-color: $swatch--action;
-$c_badge--border-radius: $border-radius;
-$c_badge--color: $swatch--white;
-$c_badge--font-size: 50%;
-$c_badge--font-weight: $font-weight;
-$c_badge--line-height: 1;
-$c_badge--padding: 0.4em 0.6em;
-
-$c_badge--hover--background-color: lighten($c_badge--background-color, 10%);
-$c_badge--hover--color: $c_badge--color;
-
-$c_badge--focus--background-color: lighten($c_badge--background-color, 10%);
-$c_badge--focus--color: $c_badge--color;
-
 .c_badge {
-  background-color: $c_badge--background-color;
-  border-radius: $c_badge--border-radius;
-  color: $c_badge--color;
+  @include swatch("background-color", "action");
+  border-radius: $border-radius;
+  color: white;
   display: inline-block;
-  font-size: $c_badge--font-size;
-  font-weight: $c_badge--font-weight;
-  line-height: $c_badge--line-height;
-  padding: $c_badge--padding;
+  font-size: 50%;
+  font-weight: $font-weight;
+  line-height: 1;
+  padding: 0.4em 0.6em;
 
   &:hover {
-    background-color: $c_badge--hover--background-color;
-    color: $c_badge--hover--color;
+    // background-color: lighten($swatch--action, 10%);
+    color: white;
   }
 
   &:focus {
-    background-color: $c_badge--focus--background-color;
-    color: $c_badge--focus--color;
+    // background-color: lighten($swatch--action, 10%);
+    color: white;
   }
 }

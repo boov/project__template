@@ -1,8 +1,6 @@
-$u_font-weight--breakpoints: $breakpoints;
-
 $u_font-weight--utilities: (
-  bold: $font-weight--bold,
   default: $font-weight,
+  bold: $font-weight--bold,
   light: $font-weight--light
 );
 
@@ -13,7 +11,7 @@ $u_font-weight--utilities: (
 }
 
 @each $utility-key, $utility-value in $u_font-weight--utilities {
-  @each $breakpoint-name, $breakpoint-size in $u_font-weight--breakpoints {
+  @each $breakpoint-name, $breakpoint-size in $breakpoints {
     @media (min-width: $breakpoint-size) {
       .u_font-weight--#{$utility-key}--#{$breakpoint-name} {
         font-weight: $utility-value !important;

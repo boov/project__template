@@ -1,8 +1,7 @@
-$u_line-height--breakpoints: $breakpoints;
-
 $u_line-height--utilities: (
+  one: 1em,
   default: $line-height,
-  loose: $line-height--loose,
+  snug: $line-height--snug,
   tight: $line-height--tight
 );
 
@@ -13,7 +12,7 @@ $u_line-height--utilities: (
 }
 
 @each $utility-key, $utility-value in $u_line-height--utilities {
-  @each $breakpoint-name, $breakpoint-size in $u_line-height--breakpoints {
+  @each $breakpoint-name, $breakpoint-size in $breakpoints {
     @media (min-width: $breakpoint-size) {
       .u_line-height--#{$utility-key}--#{$breakpoint-name} {
         line-height: $utility-value !important;

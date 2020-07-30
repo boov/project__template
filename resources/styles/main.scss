@@ -1,66 +1,130 @@
 @charset "utf-8";
 
+// Packages
+@import "normalize.css/normalize.css";
+@import "cookieconsent/build/cookieconsent.min.css";
+
+// Core
 @import "core/fonts";
 @import "core/functions";
-@import "core/variables";
-@import "core/keyframes";
 @import "core/mixins";
+@import "core/variables";
+@import "core/palettes"; // TODO
 
 // Elements
 @import "elements/anchor";
-@import "elements/blockquote";
+@import "elements/blockquote"; // TODO
 @import "elements/body";
-@import "elements/button";
-@import "elements/fieldset";
-@import "elements/figure";
+@import "elements/button"; // TODO
+@import "elements/fieldset"; // TODO
+@import "elements/figure"; // TODO
 @import "elements/heading";
 @import "elements/html";
 @import "elements/image";
-@import "elements/input";
+@import "elements/input"; // TODO
 @import "elements/label";
-@import "elements/list";
+@import "elements/list"; // TODO
 @import "elements/mark";
 @import "elements/paragraph";
-@import "elements/rule";
-@import "elements/select";
-@import "elements/table";
-@import "elements/textarea";
+@import "elements/rule"; // TODO
+@import "elements/table"; // TODO
+@import "elements/video";
 
+// Layouts
 @import "layouts/container";
 @import "layouts/flex";
 @import "layouts/grid";
+@import "layouts/stack"; // TODO
 
-@import "components/badge";
-@import "components/band";
-@import "components/box";
-@import "components/breadcrumbs";
-@import "components/card";
-@import "components/form-group";
-@import "components/gutter";
-@import "components/modal";
-@import "components/notification";
-@import "components/pagination";
-@import "components/pullquote";
-@import "components/site";
-@import "components/tag";
+// Components
+@import "components/badge"; // TODO
+@import "components/band"; // TODO
+@import "components/banner"; // TODO
+@import "components/box"; // TODO
+@import "components/breadcrumbs"; // TODO
+@import "components/card"; // TODO
+@import "components/company-logo"; // TODO
+@import "components/content"; // TODO
+@import "components/cta"; // TODO
+@import "components/feather-icon"; // TODO
+@import "components/feature-block"; // TODO
+@import "components/footer"; // TODO
+@import "components/footer-group"; // TODO
+@import "components/footer-navigation"; // TODO
+@import "components/gutter"; // TODO
+@import "components/gutter-navigation"; // TODO
+@import "components/header"; // TODO
+@import "components/header-group"; // TODO
+@import "components/hero"; // TODO
+@import "components/icomoon"; // TODO
+@import "components/input-group"; // TODO
+@import "components/lightbox"; // TODO
+@import "components/main"; // TODO
+@import "components/main-group"; // TODO
+@import "components/modal"; // TODO
+@import "components/notification"; // TODO
+@import "components/pagination"; // TODO
+@import "components/primary-navigation"; // TODO
+@import "components/pullquote"; // TODO
+@import "components/site"; // TODO
+@import "components/social-navigation"; // TODO
+@import "components/tag"; // TODO
+@import "components/tipify"; // TODO
+@import "components/trim"; // TODO
+@import "components/trim-navigation"; // TODO
+@import "components/widget"; // TODO
 
+// Utilities
 @import "utilities/border-radius";
 @import "utilities/clear";
-@import "utilities/clearfix";
-@import "utilities/color";
+@import "utilities/color"; // TODO
 @import "utilities/display";
 @import "utilities/float";
 @import "utilities/font-family";
 @import "utilities/font-size";
 @import "utilities/font-weight";
-@import "utilities/lead";
 @import "utilities/line-height";
 @import "utilities/margin";
 @import "utilities/padding";
 @import "utilities/text-align";
 @import "utilities/text-transform";
-@import "utilities/tooltip";
 
-// vendor
-@import "vendor/feather-icon";
-@import "vendor/icomoon";
+.c_post-loop {
+  &__image {
+    max-height: 40vw;
+    width: 100%;
+    margin-bottom: spacer(3);
+  }
+
+  &__content {
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-size: rem-scale(1);
+    margin-bottom: 0.75em;
+  }
+
+  &__meta {
+    @include swatch("color", "copy--light");
+    display: flex;
+    font-size: $font-size--small;
+    list-style: none;
+    margin-bottom: 1.5em;
+    padding: 0;
+
+    li + li {
+      &:before {
+        @include swatch("color", "copy--bold");
+        content: "\2022";
+        margin: 0 spacer(1);
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

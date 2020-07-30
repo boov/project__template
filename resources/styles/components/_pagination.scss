@@ -17,12 +17,12 @@
 
   &__link {
     align-items: center;
-    background-color: $swatch--border;
-    border-color: $swatch--border;
+    // background-color: $swatch--border;
+    // border-color: $swatch--border;
     border-radius: $border-radius;
     border-style: solid;
     border-width: $border-width;
-    color: $swatch--copy;
+    // color: $swatch--copy;
     display: flex;
     height: 40px;
     justify-content: center;
@@ -31,11 +31,11 @@
 
     &:focus,
     &:hover {
-      border-color: $swatch--copy;
+      // border-color: $swatch--copy;
     }
 
     &.--active {
-      border-color: $swatch--copy;
+      // border-color: $swatch--copy;
     }
   }
 }

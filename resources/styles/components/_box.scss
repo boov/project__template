@@ -1,13 +1,11 @@
 .c_box {
-  background-color: $swatch--white;
+  @include swatch("background-color", "background");
+  @include swatch("color", "copy");
   border-radius: $border-radius;
-  border: $border-width solid transparent;
   box-shadow: $shadow;
-  display: block;
-  height: 100%;
   padding: spacer(3);
 
-  @media (min-width: map-get($breakpoints, md)) {
+  @include breakpoint("md") {
     padding: spacer(4);
   }
 

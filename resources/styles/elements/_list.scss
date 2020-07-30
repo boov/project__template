@@ -11,32 +11,23 @@ ul {
 
 dl {
   display: grid;
-  padding: spacer(3);
-  border-radius: $border-radius;
-  border: $border-width--thin solid $swatch--border;
-
-  @media (min-width: map-get($breakpoints, sm)) {
-    grid-gap: 0.5em spacer(4);
-    grid-template-columns: min-content 1fr;
-  }
+  grid-gap: 0.5em spacer(3);
+  grid-template-columns: min-content 1fr;
+  margin: 0 0 1em 0;
 
   dt {
-    color: $swatch--emphasis;
+    @include swatch("color", "copy--bold");
     font-weight: $font-weight--bold;
     margin: 0;
     padding: 0;
 
-    @media (min-width: map-get($breakpoints, sm)) {
+    @include breakpoint("sm") {
       white-space: nowrap;
     }
   }
 
   dd {
-    margin: 0 0 0.5em 0;
+    margin: 0;
     padding: 0;
-
-    @media (min-width: map-get($breakpoints, sm)) {
-      margin: 0;
-    }
   }
 }

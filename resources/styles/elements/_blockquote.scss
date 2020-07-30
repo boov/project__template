@@ -1,31 +1,31 @@
-$e_blockquote--font-size: $font-size--large;
-$e_blockquote--font-style: italic;
-$e_blockquote--font-weight: $font-weight--light;
-$e_blockquote--margin: 0 0 1em 0;
-$e_blockquote__cite--color: $swatch--subtle;
-$e_blockquote__cite--font-size: $font-size--small;
-$e_blockquote__cite--font-style: normal;
+blockquote {
+  margin: spacer(4) 0;
+  padding-left: spacer(4);
+  // position: relative;
+  @include swatch("border-color", "border");
+  border-width: 0 0 0 $border-width;
+  border-style: solid;
 
-.e_blockquote {
-  font-size: $e_blockquote--font-size;
-  font-style: $e_blockquote--font-style;
-  font-weight: $e_blockquote--font-weight;
-  margin: $e_blockquote--margin;
-
-  &__paragraph {
-    &:before {
-      content: "\201C";
-    }
-
-    &:after {
-      content: "\201D";
-    }
+  &:before {
+    // @include swatch("color", "brand");
+    // content: "\0201C";
+    // font-family: sans-serif;
+    // font-size: rem-scale(8);
+    // left: 0;
+    // position: absolute;
+    // top: 0;
   }
 
-  &__cite {
-    color: $e_blockquote__cite--color;
+  p {
+    @include swatch("color", "copy--bold");
+    font-size: rem-scale(2);
+    font-weight: $font-weight--light;
+    margin: 0 0 0.75em 0;
+  }
+
+  cite {
+    @include swatch("color", "copy--light");
     display: block;
-    font-size: $e_blockquote__cite--font-size;
-    font-style: $e_blockquote__cite--font-style;
+    font-size: $font-size--small;
   }
 }

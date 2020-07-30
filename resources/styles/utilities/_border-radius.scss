@@ -1,8 +1,7 @@
-$u_border-radius--breakpoints: $breakpoints;
-
 $u_border-radius--utilities: (
-  default: $border-radius,
   none: 0,
+  default: $border-radius,
+  small: $border-radius--small,
   round: $border-radius--round
 );
 
@@ -13,7 +12,7 @@ $u_border-radius--utilities: (
 }
 
 @each $utility-key, $utility-value in $u_border-radius--utilities {
-  @each $breakpoint-name, $breakpoint-size in $u_border-radius--breakpoints {
+  @each $breakpoint-name, $breakpoint-size in $breakpoints {
     @media (min-width: $breakpoint-size) {
       .u_border-radius--#{$utility-key}--#{$breakpoint-name} {
         border-radius: $utility-value !important;

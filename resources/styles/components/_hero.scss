@@ -1,0 +1,118 @@
+.c_hero {
+  @include swatch("background-color", "background");
+  @include swatch("color", "copy");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: spacer(5) 0;
+  position: relative;
+
+  @include breakpoint("sm") {
+    padding: spacer(6) 0;
+  }
+
+  @include breakpoint("lg") {
+    padding: spacer(7) 0;
+  }
+
+  &.--tight {
+    @include breakpoint("sm") {
+      padding: spacer(6) 0;
+    }
+  }
+
+  &__contents {
+    position: relative;
+    z-index: 2;
+
+    @include breakpoint("md") {
+      max-width: 80%;
+    }
+
+    @include breakpoint("lg") {
+      max-width: 65%;
+    }
+
+    @include breakpoint("xl") {
+      max-width: 55%;
+    }
+
+    &.--centered {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    // h1 {
+    //   margin-bottom: 0.5em;
+
+    //   @include breakpoint("xl") {
+    //     font-size: rem-scale(7);
+    //   }
+    // }
+
+    // p {
+    //   font-size: rem-scale(2);
+    //   font-weight: $font-weight--light;
+    //   margin-bottom: 2em;
+
+    //   @include breakpoint("lg") {
+    //     margin-bottom: 3em;
+    //   }
+    // }
+
+    // ul {
+    //   display: flex;
+    //   flex-wrap: wrap;
+    //   justify-content: center;
+    //   list-style: none;
+    //   margin: -0.5em;
+    //   padding: 0;
+
+    //   @include breakpoint("sm") {
+    //     justify-content: flex-start;
+    //   }
+
+    //   li {
+    //     padding: 0.5em;
+
+    //     a {
+    //       width: 100%;
+    //     }
+    //   }
+    // }
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__video {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+
+    video {
+      display: block;
+      height: 100%;
+      left: 50%;
+      min-height: 100%;
+      min-width: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+      position: relative;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      @include breakpoint("sm") {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+}

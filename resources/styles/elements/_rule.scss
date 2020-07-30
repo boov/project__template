@@ -1,17 +1,24 @@
 hr {
-  border-color: $swatch--border;
-  border-style: solid;
-  border-width: $border-width 0 0 0;
-  height: 0;
+  @include swatch("background-color", "border");
+  border-radius: $border-radius;
+  border: none;
+  height: $border-width;
   margin: spacer(3) 0;
-  max-width: spacer(5);
-  overflow: visible;
+  width: spacer(5);
 
-  @media (min-width: map-get($breakpoints, md)) {
+  @include breakpoint("md") {
     margin: spacer(4) 0;
   }
 
   &.--full {
-    max-width: none;
+    width: auto;
+  }
+
+  &.--spacious {
+    margin: spacer(4) 0;
+
+    @include breakpoint("md") {
+      margin: spacer(5) 0;
+    }
   }
 }

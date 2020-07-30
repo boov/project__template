@@ -1,21 +1,20 @@
 {
   "name": "project__template",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "scripts": {
     "clean": "rimraf public",
-    "webpack:development": "cross-env NODE_ENV=development webpack --hide-modules --progress --watch --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "webpack:production": "cross-env NODE_ENV=production webpack --hide-modules --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "development": "npm run clean && npm run webpack:development",
-    "production": "npm run clean && npm run webpack:production"
+    "parcel:development": "cross-env NODE_ENV=development node parceljs.js",
+    "parcel:production": "cross-env NODE_ENV=production node parceljs.js",
+    "development": "npm run clean && npm run parcel:development",
+    "production": "npm run clean && npm run parcel:production"
   },
   "author": "Matthew Booth <matthew@boov.co.uk>",
   "license": "MIT",
   "devDependencies": {
-    "cross-env": "^6.0.3",
-    "laravel-mix": "^5.0.1",
-    "resolve-url-loader": "^3.1.0",
-    "sass": "^1.24.3",
-    "sass-loader": "^8.0.0",
-    "vue-template-compiler": "^2.6.11"
+    "autoprefixer": "^9.7.4",
+    "cross-env": "^7.0.2",
+    "parcel-bundler": "^1.12.4",
+    "rimraf": "^3.0.2",
+    "sass": "^1.26.3"
   }
 }
