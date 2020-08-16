@@ -5,13 +5,15 @@
   box-shadow: $shadow;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   &__header {
-    // background-color: $swatch--brand;
+    @include swatch("background-color", "background--lowlight");
     min-height: 10px;
   }
 
   &__image {
+    border-radius: initial;
     display: block;
     width: 100%;
   }

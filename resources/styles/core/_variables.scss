@@ -1,5 +1,5 @@
 // scale
-$scale--measurements: 1.6;
+$scale--measurements: 1.55;
 $scale--typography: 1.2;
 
 // border-radius
@@ -61,5 +61,7 @@ $spacers: (
   4: rem-calc(modular-scale($spacer, 3)),
   5: rem-calc(modular-scale($spacer, 4)),
   6: rem-calc(modular-scale($spacer, 5)),
-  7: rem-calc(modular-scale($spacer, 6))
+  7: rem-calc(modular-scale($spacer, 6)),
+  8: rem-calc(modular-scale($spacer, 7)),
+  9: rem-calc(modular-scale($spacer, 8))
 );

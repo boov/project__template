@@ -18,12 +18,17 @@
   }
 }
 
-@mixin swatch($property, $swatch) {
+@mixin swatch($property, $swatch, $important: false) {
   $default: map-get($palettes, default);
 
   @if (map-has-key($default, $swatch)) {
-    #{$property}: map-get($default, $swatch);
-    #{$property}: var(--#{$swatch});
+    @if $important {
+      #{$property}: map-get($default, $swatch) !important;
+      #{$property}: var(--#{$swatch}) !important;
+    } @else {
+      #{$property}: map-get($default, $swatch);
+      #{$property}: var(--#{$swatch});
+    }
   } @else {
     @warn "'#{$swatch}' passed to swatch() is not a valid swatch name.";
   }

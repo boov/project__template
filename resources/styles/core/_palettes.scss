@@ -1,8 +1,9 @@
 // global
+$s_global--hue: 0;
 $s_global--negative: #cc4033;
 $s_global--positive: #569400;
-$s_global--brand: #1769aa;
-$s_global--action: #ffc107;
+$s_global--brand: hsl($s_global--hue, 70, 50);
+$s_global--action: $s_global--brand;
 
 // default
 $s_default--background: white;

@@ -37,13 +37,21 @@
 @function modular-scale($value, $increment: 0, $ratio: $scale--measurements) {
   @if ($increment > 0) {
     @for $i from 1 through $increment {
-      $value: $value * $ratio;
+      @if (unit($value) == "px") {
+        $value: floor($value * $ratio);
+      } @else {
+        $value: $value * $ratio;
+      }
     }
   }
 
   @if ($increment < 0) {
     @for $i from 1 through abs($increment) {
-      $value: $value / $ratio;
+      @if (unit($value) == "px") {
+        $value: floor($value / $ratio);
+      } @else {
+        $value: $value / $ratio;
+      }
     }
   }
 

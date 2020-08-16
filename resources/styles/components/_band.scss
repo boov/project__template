@@ -29,23 +29,28 @@
   }
 
   &.--spacious {
+    grid-gap: spacer(5);
     padding: spacer(5) 0;
 
     @include breakpoint("sm") {
+      grid-gap: spacer(6);
       padding: spacer(6) 0;
     }
 
     @include breakpoint("lg") {
+      grid-gap: spacer(7);
       padding: spacer(7) 0;
     }
   }
 
   &.--tight {
     @include breakpoint("sm") {
+      grid-gap: spacer(4);
       padding: spacer(4) 0;
     }
 
     @include breakpoint("lg") {
+      grid-gap: spacer(5);
       padding: spacer(5) 0;
     }
   }

@@ -3,7 +3,8 @@ $l_stack--spacing: (
   s2: spacer(2),
   s3: spacer(3),
   s4: spacer(4),
-  s5: spacer(5)
+  s5: spacer(5),
+  s6: spacer(6)
 );
 
 .l_stack {
@@ -14,7 +15,7 @@ $l_stack--spacing: (
   }
 
   @each $key, $value in $l_stack--spacing {
-    &.--#{$key} {
+    &.--gap-#{$key} {
       grid-gap: $value;
     }
   }
@@ -22,7 +23,7 @@ $l_stack--spacing: (
   @each $breakpoint-name, $breakpoint-size in $breakpoints {
     @media (min-width: $breakpoint-size) {
       @each $key, $value in $l_stack--spacing {
-        &.--#{$key}--#{$breakpoint-name} {
+        &.--gap-#{$key}--#{$breakpoint-name} {
           grid-gap: $value;
         }
       }
