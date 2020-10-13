@@ -1,0 +1,33 @@
+$l_stack--spacing: (
+  s1: spacer(1),
+  s2: spacer(2),
+  s3: spacer(3),
+  s4: spacer(4),
+  s5: spacer(5),
+  s6: spacer(6)
+);
+
+.l_stack {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+
+  > * {
+    margin-bottom: 0;
+  }
+
+  @each $key, $value in $l_stack--spacing {
+    &.--gap-#{$key} {
+      grid-gap: $value;
+    }
+  }
+
+  @each $breakpoint-name, $breakpoint-size in $breakpoints {
+    @media (min-width: $breakpoint-size) {
+      @each $key, $value in $l_stack--spacing {
+        &.--gap-#{$key}--#{$breakpoint-name} {
+          grid-gap: $value;
+        }
+      }
+    }
+  }
+}

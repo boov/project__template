@@ -1,0 +1,53 @@
+@mixin breakpoint($breakpoint, $direction: "up") {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin icon-font($content: false, $font: "icomoon") {
+  font-family: $font;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+
+  @if ($content) {
+    content: $content;
+  }
+}
+
+@mixin swatch($property, $swatch, $important: false) {
+  $default: map-get($palettes, default);
+
+  @if (map-has-key($default, $swatch)) {
+    @if $important {
+      #{$property}: map-get($default, $swatch) !important;
+      #{$property}: var(--#{$swatch}) !important;
+    } @else {
+      #{$property}: map-get($default, $swatch);
+      #{$property}: var(--#{$swatch});
+    }
+  } @else {
+    @warn "'#{$swatch}' passed to swatch() is not a valid swatch name.";
+  }
+}
+
+@mixin set-vars($map: null) {
+  @if ($map == null) {
+    @error "Map of variables is expected, instead got: null";
+  }
+
+  @if (type_of($map) != map) {
+    @error "Map of variables is expected, instead got another type passed: #{type_of($varMap)}";
+  }
+
+  @each $variable, $value in $map {
+    @if (type_of($value) == string) {
+      --#{$variable}: $value;
+    } @else {
+      --#{$variable}: #{$value};
+    }
+  }
+}

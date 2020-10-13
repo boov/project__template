@@ -1,0 +1,20 @@
+blockquote {
+  @include swatch("border-color", "border");
+  border-style: solid;
+  border-width: 0 0 0 $border-width;
+  margin: spacer(4) 0;
+  padding-left: spacer(4);
+
+  p {
+    @include swatch("color", "copy--bold");
+    font-size: rem-scale(2);
+    font-weight: $font-weight--light;
+    margin: 0 0 0.75em 0;
+  }
+
+  cite {
+    @include swatch("color", "copy--light");
+    display: block;
+    font-size: $font-size--small;
+  }
+}
