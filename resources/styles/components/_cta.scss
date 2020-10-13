@@ -1,0 +1,9 @@
+.c_cta {
+  @include swatch("background-color", "background");
+  @include swatch("color", "copy");
+  padding: spacer(5) 0;
+
+  @include breakpoint("lg") {
+    padding: spacer(6) 0;
+  }
+}

@@ -1,0 +1,35 @@
+.c_card {
+  @include swatch("background-color", "background");
+  @include swatch("color", "copy");
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__header {
+    @include swatch("background-color", "background--lowlight");
+  }
+
+  &__image {
+    border-radius: initial;
+    display: block;
+    width: 100%;
+  }
+
+  &__content {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: spacer(4);
+
+    @include breakpoint("lg") {
+      padding: spacer(5);
+    }
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

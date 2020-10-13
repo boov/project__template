@@ -1,0 +1,23 @@
+.c_box {
+  @include swatch("background-color", "background");
+  @include swatch("color", "copy");
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  padding: spacer(3);
+
+  @include breakpoint("md") {
+    padding: spacer(4);
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  &.--spacious {
+    padding: spacer(4);
+
+    @include breakpoint("lg") {
+      padding: spacer(5);
+    }
+  }
+}

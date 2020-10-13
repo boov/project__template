@@ -1,0 +1,10 @@
+.c_site {
+  @include swatch("background-color", "background");
+  @include swatch("color", "copy");
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: map-get($breakpoints, site);
+  min-height: 100vh;
+  overflow: hidden;
+}

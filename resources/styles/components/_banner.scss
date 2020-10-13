@@ -1,0 +1,9 @@
+.c_banner {
+  @include swatch("background-color", "background");
+  @include swatch("color", "copy");
+  padding: spacer(4) 0;
+
+  @include breakpoint("sm") {
+    padding: spacer(5) 0;
+  }
+}
