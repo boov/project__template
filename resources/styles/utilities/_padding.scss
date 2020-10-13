@@ -55,7 +55,7 @@ $u_padding--utilities: (
         padding-right: $utility-value !important;
       }
 
-      .u_padding-x--#{$utility-key}--#{$breakpoint-name} {
+      .u_padding-y--#{$utility-key}--#{$breakpoint-name} {
         padding-bottom: $utility-value !important;
         padding-top: $utility-value !important;
       }

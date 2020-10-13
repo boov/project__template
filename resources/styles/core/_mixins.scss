@@ -33,3 +33,21 @@
     @warn "'#{$swatch}' passed to swatch() is not a valid swatch name.";
   }
 }
+
+@mixin set-vars($map: null) {
+  @if ($map == null) {
+    @error "Map of variables is expected, instead got: null";
+  }
+
+  @if (type_of($map) != map) {
+    @error "Map of variables is expected, instead got another type passed: #{type_of($varMap)}";
+  }
+
+  @each $variable, $value in $map {
+    @if (type_of($value) == string) {
+      --#{$variable}: $value;
+    } @else {
+      --#{$variable}: #{$value};
+    }
+  }
+}

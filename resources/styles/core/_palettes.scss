@@ -1,5 +1,5 @@
 // global
-$s_global--hue: 0;
+$s_global--hue: 210;
 $s_global--negative: #cc4033;
 $s_global--positive: #569400;
 $s_global--brand: hsl($s_global--hue, 70, 50);
@@ -56,8 +56,8 @@ $palettes: (
   ),
   "invert": (
     "background": $s_invert--background,
-    "background--highlight": mix(white, $s_invert--background, 5%),
-    "background--lowlight": mix(black, $s_invert--background, 5%),
+    "background--highlight": mix(white, $s_invert--background, 10%),
+    "background--lowlight": mix(black, $s_invert--background, 10%),
     "border": $s_invert--border,
     "copy": mix($s_invert--copy, $s_invert--background, 85%),
     "copy--bold": $s_invert--copy,
@@ -101,4 +101,28 @@ $palettes: (
       --#{$variable}: #{$color};
     }
   }
+}
+
+.\~\~wibble {
+  $anchor: $s_global--action;
+  $background: white;
+  $border: mix(black, $background, 10%);
+  $foreground: desaturate(mix(black, $s_global--brand, 65%), 33%);
+  $detail: pink;
+
+  @include set-vars(
+    (
+      "anchor": $anchor,
+      "anchor--hover": mix(black, $anchor, 10%),
+      "anchor--focus": mix(black, $anchor, 20%),
+      "background": $background,
+      "background--highlight": mix(white, $background, 5%),
+      "background--lowlight": mix(black, $background, 5%),
+      "border": $border,
+      "foreground": mix($foreground, $background, 75%),
+      "foreground--bold": $foreground,
+      "foreground--light": mix($foreground, $background, 50%),
+      "detail": $detail
+    )
+  );
 }

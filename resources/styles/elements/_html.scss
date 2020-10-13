@@ -1,6 +1,6 @@
 html {
   @extend .\~\~default;
-  @include swatch("background-color", "background");
+  @include swatch("background-color", "background--lowlight");
   @include swatch("color", "copy");
   box-sizing: border-box;
   font-family: $font-family;

@@ -1,12 +1,12 @@
 "use strict";
 
 import netlifyIdentity from "netlify-identity-widget";
-import cookieconsent from "cookieconsent";
-import Gutter from "./components/gutter.js";
-import Lightbox from "./components/lightbox.js";
-import Modal from "./components/modal.js";
-import Notification from "./components/notification.js";
-import Tabs from "./components/tabs.js";
+import "cookieconsent";
+// import Gutter from "./components/gutter.js";
+// import Lightbox from "./components/lightbox.js";
+// import Modal from "./components/modal.js";
+// import Notification from "./components/notification.js";
+// import Tabs from "./components/tabs.js";
 
 (function () {
   document.addEventListener("DOMContentLoaded", () => {

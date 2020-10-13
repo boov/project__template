@@ -9,7 +9,6 @@
 
   &__header {
     @include swatch("background-color", "background--lowlight");
-    min-height: 10px;
   }
 
   &__image {
@@ -19,15 +18,18 @@
   }
 
   &__content {
-    padding: 2rem;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: spacer(4);
+
+    @include breakpoint("lg") {
+      padding: spacer(5);
+    }
 
     > *:last-child {
       margin-bottom: 0;
     }
-  }
-
-  &__title {
-    font-size: $font-size--large;
-    margin: 0 0 0.5em 0;
   }
 }

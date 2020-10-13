@@ -1,10 +1,13 @@
 .c_badge {
-  @include swatch("background-color", "action");
-  border-radius: $border-radius;
-  color: white;
+  @include swatch("background-color", "background");
+  @include swatch("color", "copy");
+  border-radius: $border-radius--round;
   display: inline-block;
-  font-size: 50%;
-  font-weight: $font-weight;
+  font-size: $font-size--tiny;
+  font-weight: $font-weight--bold;
   line-height: 1;
-  padding: 0.4em 0.6em;
+  padding: 0.7em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
 }

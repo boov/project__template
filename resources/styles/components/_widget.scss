@@ -1,7 +1,7 @@
 .c_widget {
   padding: spacer(3);
   background-color: #eee;
-  font-size: rem-scale(-1);
+  font-size: $font-size--small;
 
   &__header {
     @include swatch("color", "copy--bold");

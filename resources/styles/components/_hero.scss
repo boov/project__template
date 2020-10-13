@@ -21,26 +21,15 @@
     }
   }
 
+  &.--spacious {
+    @include breakpoint("site") {
+      padding: spacer(9) 0;
+    }
+  }
+
   &__content {
     position: relative;
     z-index: 2;
-
-    @include breakpoint("md") {
-      max-width: 80%;
-    }
-
-    @include breakpoint("lg") {
-      max-width: 65%;
-    }
-
-    @include breakpoint("xl") {
-      max-width: 55%;
-    }
-
-    &.--centered {
-      margin: 0 auto;
-      text-align: center;
-    }
 
     > *:last-child {
       margin-bottom: 0;
@@ -48,7 +37,6 @@
   }
 
   &__image {
-    // filter: contrast(0.75);
     height: 100%;
     left: 0;
     object-fit: cover;

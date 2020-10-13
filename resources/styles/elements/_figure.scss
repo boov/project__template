@@ -4,6 +4,11 @@ figure {
   margin: 2em auto;
   overflow: hidden;
 
+  img {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
   figcaption {
     @include swatch("background-color", "background");
     @include swatch("color", "copy");

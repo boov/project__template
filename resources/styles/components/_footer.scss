@@ -1,14 +1,14 @@
 .c_footer {
   @include swatch("background-color", "background");
   @include swatch("color", "copy");
+  display: grid;
   font-size: $font-size--small;
-  padding: spacer(4) 0;
-
-  @include breakpoint("sm") {
-    padding: spacer(5) 0;
-  }
+  grid-gap: spacer(5);
+  grid-template-columns: minmax(0, 1fr);
+  padding: spacer(5) 0;
 
   @include breakpoint("lg") {
+    grid-gap: spacer(6);
     padding: spacer(6) 0;
   }
 }

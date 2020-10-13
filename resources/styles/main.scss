@@ -58,7 +58,6 @@
 @import "components/icomoon"; // TODO
 @import "components/input-group"; // TODO
 @import "components/lightbox"; // TODO
-@import "components/main"; // TODO
 @import "components/main-group"; // TODO
 @import "components/modal"; // TODO
 @import "components/notification"; // TODO
@@ -102,7 +101,7 @@
   }
 
   &__title {
-    font-size: rem-scale(1);
+    font-size: $font-size--large;
     margin-bottom: 0.75em;
   }
 

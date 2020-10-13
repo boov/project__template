@@ -1,34 +1,45 @@
 .c_gutter {
   $this: &;
-  $width: 300px;
   @include swatch("background-color", "background");
+  @include swatch("color", "copy");
   bottom: 0;
-  max-width: 90%;
+  box-shadow: 0 0 10vh rgba(black, 0.4);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: spacer(6) spacer(5) spacer(5) spacer(5);
   position: fixed;
-  right: -$width;
-  top: 0;
-  transition: left $duration, right $duration;
-  visibility: hidden;
-  width: $width;
+  top: calc(-100% - 10vh);
+  transition: top 500ms cubic-bezier(0.7, 0, 0.3, 1);
+  width: 100%;
   z-index: 1000;
 
+  &:focus-within,
   &.--reveal {
-    visibility: visible;
+    top: 0;
   }
 
-  &.--left {
-    left: -$width;
+  &__close {
+    @include swatch("background-color", "background--lowlight");
+    @include swatch("color", "copy--light");
+    align-items: center;
+    display: flex;
+    font-size: rem-scale(2);
+    font-weight: $font-weight--light;
+    height: spacer(6);
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    top: 0;
+    transition: color $duration--fast ease-in-out, background-color $duration--fast ease-in-out;
+    width: 100%;
+    z-index: 2;
 
-    &#{$this}--reveal {
-      left: 0;
-    }
-  }
-
-  &.--right {
-    right: -$width;
-
-    &#{$this}--reveal {
-      right: 0;
+    &:hover,
+    &:focus {
+      @include swatch("color", "copy--bold");
+      outline: none;
     }
   }
 }

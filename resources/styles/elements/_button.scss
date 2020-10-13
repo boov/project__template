@@ -16,7 +16,7 @@
   justify-content: space-between;
   line-height: $line-height;
   padding: 1em 2em;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   transition: border-color $duration ease-in-out, background-color $duration ease-in-out;
 
@@ -36,11 +36,30 @@
   &.--positive {
     @include swatch("background-color", "positive");
     @include swatch("border-color", "positive");
+
+    &.--outline,
+    &.--text {
+      @include swatch("color", "positive");
+    }
   }
 
   &.--negative {
     @include swatch("background-color", "negative");
     @include swatch("border-color", "negative");
+
+    &.--outline,
+    &.--text {
+      @include swatch("color", "negative");
+    }
+  }
+
+  &.--square {
+    border-radius: $border-radius;
+  }
+
+  &.--icon {
+    justify-content: center;
+    padding: 1em;
   }
 
   &.--expand {
@@ -90,8 +109,9 @@
   }
 
   svg {
-    width: 1.2em;
-    height: 1.2em;
+    flex-shrink: 0;
+    height: 1em;
+    width: 1em;
   }
 }
 

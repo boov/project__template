@@ -7,16 +7,16 @@ h6 {
   @include swatch("color", "copy--bold");
   font-family: $font-family--display;
   font-weight: $font-weight--bold;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
   line-height: $line-height--tight;
   margin: 0 0 1em 0;
 
   &.--smallcaps {
     @include swatch("color", "copy--light");
     display: block;
-    font-size: rem-scale(-1);
+    font-size: $font-size--small;
     font-weight: $font-weight;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em;
     line-height: $line-height;
     text-transform: uppercase;
   }
@@ -39,36 +39,36 @@ h6 {
 
   &.--h0 {
     @include breakpoint("lg") {
-      font-size: rem-scale(7);
+      font-size: rem-scale(6);
     }
   }
 
   &.--h1 {
-    font-size: rem-scale(6);
-  }
-
-  &.--h2 {
     font-size: rem-scale(5);
   }
 
-  &.--h3 {
+  &.--h2 {
     font-size: rem-scale(4);
   }
 
-  &.--h4 {
+  &.--h3 {
     font-size: rem-scale(3);
   }
 
-  &.--h5 {
+  &.--h4 {
     font-size: rem-scale(2);
   }
 
+  &.--h5 {
+    font-size: $font-size--large;
+  }
+
   &.--h6 {
-    font-size: rem-scale(1);
+    font-size: $font-size;
   }
 
   &.--h7 {
-    font-size: rem-scale(0);
+    font-size: $font-size--small;
   }
 
   a {
@@ -77,25 +77,25 @@ h6 {
 }
 
 h1 {
-  font-size: rem-scale(6);
-}
-
-h2 {
   font-size: rem-scale(5);
 }
 
-h3 {
+h2 {
   font-size: rem-scale(4);
 }
 
-h4 {
+h3 {
   font-size: rem-scale(3);
 }
 
-h5 {
+h4 {
   font-size: rem-scale(2);
 }
 
+h5 {
+  font-size: $font-size--large;
+}
+
 h6 {
-  font-size: rem-scale(1);
+  font-size: $font-size;
 }

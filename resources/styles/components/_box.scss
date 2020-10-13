@@ -12,4 +12,12 @@
   > *:last-child {
     margin-bottom: 0;
   }
+
+  &.--spacious {
+    padding: spacer(4);
+
+    @include breakpoint("lg") {
+      padding: spacer(5);
+    }
+  }
 }

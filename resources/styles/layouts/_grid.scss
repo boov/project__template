@@ -6,7 +6,7 @@ $l_grid--gap--tight: 18px;
 .l_grid {
   display: grid;
   grid-gap: $l_grid--gap--comfortable;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   justify-content: center;
   list-style: none;
   margin: 0;
